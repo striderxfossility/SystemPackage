@@ -14,15 +14,6 @@
     "require": {
         "nesbot/carbon": "^2.64"
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Jelle\\Strider\\ExtraCollectServiceProvider"
-            ],
-            "aliases": {
-            }
-        }
-    },
     "require-dev": {
         "laravel/framework": "^9.46"
     }
