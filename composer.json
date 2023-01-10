@@ -1,0 +1,18 @@
+{
+    "name": "jelle/strider",
+    "autoload": {
+        "psr-4": {
+            "Jelle\\Strider\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jelle Bakker",
+            "email": "jellebakker15@live.nl"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1",
+        "nesbot/carbon": "^2.65"
+    }
+}
