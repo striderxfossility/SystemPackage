@@ -1,5 +1,6 @@
 <?php
-namespace Jelle;
+
+namespace Jelle\Strider;
 
 use Carbon\Carbon;
 
