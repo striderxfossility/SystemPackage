@@ -8,6 +8,6 @@ class AlgemeenComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.blocks.algemeen');
+        return view('blocks::algemeen');
     }
 }
