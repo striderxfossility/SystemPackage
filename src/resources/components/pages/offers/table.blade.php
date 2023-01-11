@@ -13,7 +13,7 @@
             <x-table-head-column>
                 project
             </x-table-head-column>
-            @if($offers->first()->room_count)
+            @if(isset($offers->first()->room_count))
                 <x-table-head-column>
                     ruimtes
                 </x-table-head-column>
@@ -54,11 +54,11 @@
                 <x-table-body-column>
                     @if(!$offer->template)
                         @if ($offer->contact != null)
-                            @if($offer->room_count)
-                                    <div>
-                                        <i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }}
-                                    </div>
-                                @else
+                            @if(isset($offer->room_count))
+                                <div>
+                                    <i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }}
+                                </div>
+                            @else
                                 <div class="text-blue-700">
                                     @if ($offer->contact != null)
                                         @if($offer->contact->state != \App\Enums\ContactState::Company->value)
@@ -103,14 +103,14 @@
                     <x-table-body-column />
                 @endif
 
-                @if($offer->room_count)
+                @if(isset($offer->room_count))
                     <x-table-body-column>
                         {{ $offer->room_count }}
                     </x-table-body-column>
                 @endif
 
                 <x-table-body-column>
-                    @if ($offer->template == 0 && $offer->room_count)
+                    @if ($offer->template == 0 && isset($offer->room_count))
                         @if ($offer->status > 2)
                             @if ($offer->count_products - $offer->count_open_products == $offer->count_products)
                                 <div class="text-green-600 font-bold">
