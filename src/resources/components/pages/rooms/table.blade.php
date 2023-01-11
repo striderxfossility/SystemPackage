@@ -1,6 +1,6 @@
 <x-table-main>
     <x-table-head>
-        <x-layout.table.head-row>
+        <x-table-head-row>
             <x-layout.table.head-column>
                 Offerte
             </x-layout.table.head-column>
@@ -13,7 +13,7 @@
             <x-layout.table.head-column>
                 Verkoop
             </x-layout.table.head-column>
-        </x-layout.table.head-row>
+        </x-table-head-row>
     </x-table-head>
     <x-table-body>
         @foreach($rooms as $room)

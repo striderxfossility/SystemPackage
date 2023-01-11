@@ -1,6 +1,6 @@
 <x-table-main>
     <x-table-head>
-        <x-layout.table.head-row>
+        <x-table-head-row>
             <x-layout.table.head-column>
                 Naam
             </x-layout.table.head-column>
@@ -10,7 +10,7 @@
             <x-layout.table.head-column>
                 Prijs
             </x-layout.table.head-column>
-        </x-layout.table.head-row>
+        </x-table-head-row>
     </x-table-head>
 
     <x-table-body>
