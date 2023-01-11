@@ -37,7 +37,7 @@
 
                 <x-table-body-column>
                     @if(!$offer->template)
-                        {{ \Jelle\Strider\StateService::offer($offer->state) }}
+                        {!! \Jelle\Strider\StateService::offer($offer->state) !!}
                     @else
                         Template
                     @endif
