@@ -9,9 +9,9 @@ class ViewServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/components/blocks',    'blocks');
         $this->loadViewsFrom(__DIR__.'/../resources/components/cols',      'cols');
-        $this->loadViewsFrom(__DIR__.'/resources/components/forms',     'forms');
-        $this->loadViewsFrom(__DIR__.'/resources/components/pages',     'pages');
-        $this->loadViewsFrom(__DIR__.'/resources/components/table',     'table');
-        $this->loadViewsFrom(__DIR__.'/resources/components/basics',    'basics');
+        $this->loadViewsFrom(__DIR__.'/../resources/components/forms',     'forms');
+        $this->loadViewsFrom(__DIR__.'/../resources/components/pages',     'pages');
+        $this->loadViewsFrom(__DIR__.'/../resources/components/table',     'table');
+        $this->loadViewsFrom(__DIR__.'/../resources/components/basics',    'basics');
     }
 }
