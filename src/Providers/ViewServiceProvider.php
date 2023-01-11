@@ -1,5 +1,5 @@
 <?php
-namespace Jelle\Strider;
+namespace Jelle\Strider\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

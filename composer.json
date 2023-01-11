@@ -20,7 +20,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jelle\\Strider\\ViewServiceProvider"
+                "Jelle\\Strider\\Providers\\ViewServiceProvider",
+                "Jelle\\Strider\\Providers\\ComponentServiceProvider"
             ],
             "aliases": {
             }
