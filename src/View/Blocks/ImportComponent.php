@@ -18,7 +18,7 @@ class ImportComponent extends Component
 
     public function render()
     {
-        return view('components.layout.blocks.import', [
+        return view('blocks::import', [
             'action'    => $this->action,
             'errors'    => $this->errors
         ]);

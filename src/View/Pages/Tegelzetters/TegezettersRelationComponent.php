@@ -19,7 +19,7 @@ class TegezettersRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.tegelzetters.relation', [
+        return view('pages::tegelzetters.relation', [
             'tegelzetters'  => $this->tegelzetters,
             'offer'         => $this->offer
         ]);

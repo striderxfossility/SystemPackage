@@ -16,7 +16,7 @@ class RowComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.rows.normal', [
+        return view('pages::rows.normal', [
             'row' => $this->row
         ]);
     }

@@ -8,6 +8,6 @@ class HeadColumnComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.table.head-column');
+        return view('table::head-column');
     }
 }

@@ -19,7 +19,7 @@ class TilesRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.tiles.relation', [
+        return view('pages::tiles.relation', [
             'tiles' => $this->tiles,
             'order' => $this->order
         ]);

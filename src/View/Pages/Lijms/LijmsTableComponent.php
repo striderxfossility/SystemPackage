@@ -16,7 +16,7 @@ class LijmsTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.lijms.table', [
+        return view('pages::lijms.table', [
             'lijms'  => $this->lijms,
         ]);
     }

@@ -19,7 +19,7 @@ class TilesTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.tiles.table', [
+        return view('pages::tiles.table', [
             'tiles' => $this->tiles,
             'room'  => $this->room
         ]);

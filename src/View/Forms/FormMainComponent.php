@@ -20,7 +20,7 @@ class FormMainComponent extends Component
 
     public function render()
     {
-        return view('components.layout.forms.main', [
+        return view('forms::main', [
             'method'    => $this->method,
             'action'    => $this->action,
             'errors'    => $this->errors

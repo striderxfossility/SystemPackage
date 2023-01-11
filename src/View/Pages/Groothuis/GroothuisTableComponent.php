@@ -16,7 +16,7 @@ class GroothuisTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.groothuis.table', [
+        return view('pages::groothuis.table', [
             'apis'  => $this->apis,
         ]);
     }

@@ -16,7 +16,7 @@ class VoorstrijksTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.voorstrijks.table', [
+        return view('pages::voorstrijks.table', [
             'voorstrijks'  => $this->voorstrijks,
         ]);
     }

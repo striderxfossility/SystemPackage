@@ -8,6 +8,6 @@ class TableMainComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.table.main');
+        return view('table::main');
     }
 }

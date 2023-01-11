@@ -25,7 +25,7 @@ class ProductsTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.products.table', [
+        return view('pages::products.table', [
             'products'  => $this->products,
             'room'      => $this->room,
             'package'   => $this->package,

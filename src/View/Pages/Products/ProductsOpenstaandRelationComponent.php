@@ -18,7 +18,7 @@ class ProductsOpenstaandRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.products.relation-openstaand', [
+        return view('pages::products.relation-openstaand', [
             'products'  => $this->products,
             'order'  => $this->order,
         ]);

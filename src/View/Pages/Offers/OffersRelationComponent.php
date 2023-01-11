@@ -17,7 +17,7 @@ class OffersRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.offers.relation', [
+        return view('pages::offers.relation', [
             'offers'        => $this->offers,
         ]);
     }

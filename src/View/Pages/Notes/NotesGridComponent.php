@@ -16,7 +16,7 @@ class NotesGridComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.notes.grid', [
+        return view('pages::notes.grid', [
             'notes' => $this->notes
         ]);
     }

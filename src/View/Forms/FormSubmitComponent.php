@@ -21,7 +21,7 @@ class FormSubmitComponent extends Component
 
     public function render()
     {
-        return view('components.layout.forms.submit', [
+        return view('forms::submit', [
             'name'      => $this->name,
             'full'      => $this->full,
             'bottom'    => $this->bottom,

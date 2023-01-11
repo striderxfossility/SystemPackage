@@ -8,6 +8,6 @@ class NavigationComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.blocks.navigation');
+        return view('blocks::navigation');
     }
 }

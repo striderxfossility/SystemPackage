@@ -19,7 +19,7 @@ class OffersTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.offers.table', [
+        return view('pages::offers.table', [
             'offers'        => $this->offers,
             'offerOriginal' => $this->offerOriginal
         ]);

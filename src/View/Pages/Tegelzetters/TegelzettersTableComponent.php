@@ -19,7 +19,7 @@ class TegelzettersTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.tegelzetters.table', [
+        return view('pages::tegelzetters.table', [
             'tegelzetters'  => $this->tegelzetters,
             'offer'         => $this->offer
         ]);

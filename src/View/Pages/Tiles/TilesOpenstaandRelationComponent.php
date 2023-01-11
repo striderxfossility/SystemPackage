@@ -18,7 +18,7 @@ class TilesOpenstaandRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.tiles.relation-openstaand', [
+        return view('pages::tiles.relation-openstaand', [
             'tiles'  => $this->tiles,
             'order'  => $this->order,
         ]);

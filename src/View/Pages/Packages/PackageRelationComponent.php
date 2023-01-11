@@ -16,7 +16,7 @@ class PackageRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.packages.relation', [
+        return view('pages::packages.relation', [
             'packages' => $this->packages,
         ]);
     }

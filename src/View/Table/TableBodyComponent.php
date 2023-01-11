@@ -8,6 +8,6 @@ class TableBodyComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.table.body');
+        return view('table::body');
     }
 }

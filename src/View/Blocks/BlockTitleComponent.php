@@ -15,6 +15,6 @@ class BlockTitleComponent extends Component
 
     public function render()
     {
-        return view('components.layout.blocks.title', ['extra' => $this->extra]);
+        return view('blocks::title', ['extra' => $this->extra]);
     }
 }

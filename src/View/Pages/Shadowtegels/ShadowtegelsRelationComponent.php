@@ -16,7 +16,7 @@ class ShadowtegelsRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.shadowtegels.relation', [
+        return view('pages::shadowtegels.relation', [
             'shadowtegels' => $this->shadowtegels,
         ]);
     }

@@ -19,7 +19,7 @@ class BlockSmallComponent extends Component
 
     public function render()
     {
-        return view('components.layout.blocks.block-small', [
+        return view('blocks::block-small', [
             'class'         => $this->class,
             'color'         => $this->color,
             'handle'        => $this->handle

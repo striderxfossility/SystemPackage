@@ -13,6 +13,7 @@ class FormSearchComponent extends Component
     public $value;
     public $label;
     public $table;
+    public $columns;
 
     public function __construct(string $name, string $label, string $table, ?string $value = '')
     {
@@ -25,7 +26,7 @@ class FormSearchComponent extends Component
 
     public function render()
     {
-        return view('components.layout.forms.search', [
+        return view('forms::search', [
             'name'      => $this->name,
             'value'     => $this->value,
             'label'     => $this->label,

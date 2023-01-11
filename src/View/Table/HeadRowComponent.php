@@ -8,6 +8,6 @@ class HeadRowComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.table.head-row');
+        return view('table::head-row');
     }
 }

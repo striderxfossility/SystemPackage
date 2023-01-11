@@ -8,6 +8,6 @@ class EmptyRowComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.pages.rows.empty');
+        return view('pages::rows.empty');
     }
 }

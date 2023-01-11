@@ -8,6 +8,6 @@ class OneTwoOneComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.cols.1-2-1');
+        return view('cols::1-2-1');
     }
 }

@@ -16,7 +16,7 @@ class VoegenTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.voegen.table', [
+        return view('pages::voegen.table', [
             'voegen'  => $this->voegen,
         ]);
     }

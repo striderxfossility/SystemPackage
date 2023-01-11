@@ -8,6 +8,6 @@ class EmailComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.blocks.email');
+        return view('blocks::email');
     }
 }

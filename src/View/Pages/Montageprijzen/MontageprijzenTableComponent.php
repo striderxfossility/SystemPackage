@@ -16,7 +16,7 @@ class MontageprijzenTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.montageprijzen.table', [
+        return view('pages::montageprijzen.table', [
             'montageprijzen'  => $this->montageprijzen,
         ]);
     }

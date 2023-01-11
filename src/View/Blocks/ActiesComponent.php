@@ -8,6 +8,6 @@ class ActiesComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.blocks.acties');
+        return view('blocks::acties');
     }
 }

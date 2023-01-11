@@ -19,7 +19,7 @@ class PackageTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.packages.table', [
+        return view('pages::packages.table', [
             'packages'  => $this->packages,
             'room'      => $this->room
         ]);

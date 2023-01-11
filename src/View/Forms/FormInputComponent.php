@@ -21,7 +21,7 @@ class FormInputComponent extends Component
 
     public function render()
     {
-        return view('components.layout.forms.input', [
+        return view('forms::input', [
             'name'  => $this->name,
             'value' => $this->value,
             'label' => $this->label,

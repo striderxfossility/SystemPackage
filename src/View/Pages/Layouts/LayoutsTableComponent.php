@@ -16,7 +16,7 @@ class LayoutsTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.layouts.table', [
+        return view('pages::layouts.table', [
             'layouts'  => $this->layouts,
         ]);
     }

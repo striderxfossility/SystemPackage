@@ -19,7 +19,7 @@ class RoomsTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.rooms.table', [
+        return view('pages::rooms.table', [
             'rooms' => $this->rooms,
             'offer' => $this->offer,
         ]);

@@ -16,7 +16,7 @@ class InvoicesTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.invoices.table', [
+        return view('pages::invoices.table', [
             'invoices'        => $this->invoices
         ]);
     }

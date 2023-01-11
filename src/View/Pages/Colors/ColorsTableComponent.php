@@ -16,7 +16,7 @@ class ColorsTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.colors.table', [
+        return view('pages::colors.table', [
             'colors'  => $this->colors,
         ]);
     }

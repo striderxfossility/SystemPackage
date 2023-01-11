@@ -15,7 +15,7 @@ class FormAttachmentComponent extends Component
 
     public function render()
     {
-        return view('components.layout.forms.attachment', [
+        return view('forms::attachment', [
             'label' => $this->label
         ]);
     }

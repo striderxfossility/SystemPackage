@@ -16,7 +16,7 @@ class RoomsRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.rooms.relation', [
+        return view('pages::rooms.relation', [
             'rooms' => $this->rooms,
         ]);
     }

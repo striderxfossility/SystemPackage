@@ -16,7 +16,7 @@ class HoekprofielenTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.hoekprofielen.table', [
+        return view('pages::hoekprofielen.table', [
             'hoekprofielen'  => $this->hoekprofielen,
         ]);
     }

@@ -8,6 +8,6 @@ class FullComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.cols.full');
+        return view('cols::full');
     }
 }

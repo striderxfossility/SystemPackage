@@ -16,7 +16,7 @@ class RapportsTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.rapports.table', [
+        return view('pages::rapports.table', [
             'rapports'  => $this->rapports,
         ]);
     }

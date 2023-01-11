@@ -17,7 +17,7 @@ class OrderReplationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.orders.relation', [
+        return view('pages::orders.relation', [
             'orders' => $this->orders,
         ]);
     }

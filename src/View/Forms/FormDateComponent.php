@@ -19,7 +19,7 @@ class FormDateComponent extends Component
 
     public function render()
     {
-        return view('components.layout.forms.date', [
+        return view('forms::date', [
             'name'  => $this->name,
             'value' => $this->value,
             'label' => $this->label

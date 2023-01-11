@@ -23,7 +23,7 @@ class BlockButtonComponent extends Component
 
     public function render()
     {
-        return view('components.layout.blocks.button', [
+        return view('blocks::button', [
             'url'       => $this->url, 
             'color'     => $this->color, 
             'active'    => $this->active, 

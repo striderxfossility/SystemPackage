@@ -16,7 +16,7 @@ class SuppliersTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.suppliers.table', [
+        return view('pages::suppliers.table', [
             'suppliers'  => $this->suppliers,
         ]);
     }

@@ -16,7 +16,7 @@ class ContactsTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.contacts.table', [
+        return view('pages::contacts.table', [
             'contacts'  => $this->contacts,
         ]);
     }

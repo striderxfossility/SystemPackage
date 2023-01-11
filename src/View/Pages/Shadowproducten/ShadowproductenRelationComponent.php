@@ -16,7 +16,7 @@ class ShadowproductenRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.shadowproducten.relation', [
+        return view('pages::shadowproducten.relation', [
             'shadowproducten' => $this->shadowproducten,
         ]);
     }

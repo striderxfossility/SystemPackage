@@ -8,6 +8,6 @@ class BijlagenComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.blocks.bijlagen');
+        return view('blocks::bijlagen');
     }
 }

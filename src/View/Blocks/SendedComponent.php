@@ -15,7 +15,7 @@ class SendedComponent extends Component
 
     public function render()
     {
-        return view('components.layout.blocks.sended', [
+        return view('blocks::sended', [
             'date'  => $this->date
         ]);
     }

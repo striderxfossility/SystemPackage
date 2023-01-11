@@ -15,6 +15,6 @@ class SearchComponent extends Component
 
     public function render()
     {
-        return view('components.layout.blocks.search', ['url' => $this->url]);
+        return view('blocks::search', ['url' => $this->url]);
     }
 }

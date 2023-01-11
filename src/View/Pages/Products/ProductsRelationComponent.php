@@ -19,7 +19,7 @@ class ProductsRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.products.relation', [
+        return view('pages::products.relation', [
             'products'  => $this->products,
             'choice'    => $this->choice
         ]);

@@ -16,7 +16,7 @@ class EmailsTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.emails.table', [
+        return view('pages::emails.table', [
             'emails' => $this->emails
         ]);
     }

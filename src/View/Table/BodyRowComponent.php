@@ -15,6 +15,6 @@ class BodyRowComponent extends Component
 
     public function render()
     {
-        return view('components.layout.table.body-row', ['link' => $this->link]);
+        return view('table::body-row', ['link' => $this->link]);
     }
 }

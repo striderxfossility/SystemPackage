@@ -16,7 +16,7 @@ class ChoiceRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.choices.relation', [
+        return view('pages::choices.relation', [
             'choices' => $this->choices,
         ]);
     }

@@ -16,7 +16,7 @@ class OrdersTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.orders.table', [
+        return view('pages::orders.table', [
             'orders' => $this->orders
         ]);
     }

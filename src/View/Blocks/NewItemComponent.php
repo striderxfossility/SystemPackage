@@ -8,6 +8,6 @@ class NewItemComponent extends Component
 {
     public function render()
     {
-        return view('components.layout.blocks.new-item');
+        return view('blocks::new-item');
     }
 }

@@ -16,7 +16,7 @@ class SillsTableComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.sills.table', [
+        return view('pages::sills.table', [
             'sills'  => $this->sills,
         ]);
     }

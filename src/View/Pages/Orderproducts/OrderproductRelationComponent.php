@@ -19,7 +19,7 @@ class OrderproductRelationComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.orderproducts.relation', [
+        return view('pages::orderproducts.relation', [
             'orderproducts' => $this->orderproducts,
             'order'         => $this->order
         ]);

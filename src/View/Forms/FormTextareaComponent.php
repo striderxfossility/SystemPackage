@@ -21,7 +21,7 @@ class FormTextareaComponent extends Component
 
     public function render()
     {
-        return view('components.layout.forms.textarea', [
+        return view('forms::textarea', [
             'name'          => $this->name,
             'value'         => $this->value,
             'label'         => $this->label,

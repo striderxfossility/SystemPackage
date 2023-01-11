@@ -15,6 +15,6 @@ class BlockComponent extends Component
 
     public function render()
     {
-        return view('components.layout.blocks.block', ['class' => $this->class]);
+        return view('blocks::block', ['class' => $this->class]);
     }
 }

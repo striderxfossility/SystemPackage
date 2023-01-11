@@ -16,6 +16,6 @@ class SmallContactComponent extends Component
 
     public function render()
     {
-        return view('components.layout.pages.contacts.small', ['contact' => $this->contact]);
+        return view('pages::contacts.small', ['contact' => $this->contact]);
     }
 }

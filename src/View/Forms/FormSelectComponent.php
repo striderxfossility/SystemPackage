@@ -19,7 +19,7 @@ class FormSelectComponent extends Component
 
     public function render()
     {
-        return view('components.layout.forms.select', [
+        return view('forms::select', [
             'name'          => $this->name,
             'changeLayout'  => $this->changeLayout,
             'label'         => $this->label
