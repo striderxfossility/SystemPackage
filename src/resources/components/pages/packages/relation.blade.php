@@ -1,10 +1,10 @@
-<x-layout-blocks-title>
+<x-blocks-title>
     <i class="fa-brands fa-buffer"></i> Samgengestelde artikelen
-</x-layout-blocks-title>
+</x-blocks-title>
 
 <div class="grid grid-cols-4 gap-x-2" id="packages">
     @foreach($packages as $package)
-        <x-layout-block-small handle="handlePackage cursor-move">
+        <x-block-small handle="handlePackage cursor-move">
             <x-input-text label="hidden" class="sortingPackage" name="sortPackage[{{ $package->id }}]" :value="$package->sort" />
             <div class="text-center mt-2">
                 <img style="margin:0 auto; height:200px; width:200px;" src="{{ asset('img/settings/package/' . $package->src) }}" />
@@ -15,10 +15,10 @@
                     <div class="text-xs text-slate-700">{!! \App\Services\PriceService::displayVat($package->bedrag) !!} incl. btw</div>
                 @endif
             </div>
-            <x-layout-blocks-button :url="route('packages.show', $package)" color="blue" :bottom="true">
+            <x-blocks-button :url="route('packages.show', $package)" color="blue" :bottom="true">
                 Bekijken
-            </x-layout-blocks-button>
-        </x-layout-block-small>
+            </x-blocks-button>
+        </x-block-small>
     @endforeach
 </div>
 

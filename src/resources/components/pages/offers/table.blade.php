@@ -1,5 +1,5 @@
-<x-layout-table-main>
-    <x-layout-table-head>
+<x-table-main>
+    <x-table-head>
         <x-layout.table.head-row>
             <x-layout.table.head-column>
                 status
@@ -20,9 +20,9 @@
                 bedrag
             </x-layout.table.head-column>
         </x-layout.table.head-row>
-    </x-layout-table-head>
+    </x-table-head>
 
-    <x-layout-table-body>
+    <x-table-body>
         @foreach($offers as $offer)
 
             @if($offerOriginal->exists)
@@ -31,25 +31,25 @@
                 @php($link = route('offers.show', $offer))
             @endif
 
-            <x-layout-table-body-row :link="$link">
+            <x-table-body-row :link="$link">
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     @if(!$offer->template)
                         {{ $offer->state }}
                     @else
                         Template
                     @endif
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     @if($offer->template)
                         {{ $offer->template_name }}
                     @else
                         {{ $offer->name }} {{ $offer->number }}
                     @endif
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     @if(!$offer->template)
                         @if ($offer->contact != null)
                             <div><i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }}</div>
@@ -61,25 +61,25 @@
                             <div><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
                         @endif
                     @endif
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
                 @if(!$offer->template)
                     @if($offer->contact->groothuis)
-                        <x-layout-table-body-column>
+                        <x-table-body-column>
                             {{ $offer->contact->groothuis->project }} - {{ $offer->contact->groothuis->omschrijving }}
-                        </x-layout-table-body-column>
+                        </x-table-body-column>
                     @else
-                        <x-layout-table-body-column />
+                        <x-table-body-column />
                     @endif
                 @else
-                    <x-layout-table-body-column />
+                    <x-table-body-column />
                 @endif
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     {{ $offer->room_count }}
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     @if ($offer->template == 0)
                         @if ($offer->status > 2)
                             @if ($offer->count_products - $offer->count_open_products == $offer->count_products)
@@ -111,10 +111,10 @@
                             {!! \App\Services\PriceService::displayVAT($offer->bedrag) !!} incl. btw
                         @endif
                     @endif
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-            </x-layout-table-body-row>
+            </x-table-body-row>
 
         @endforeach
-    </x-layout-table-body>
-</x-layout-table-main>
+    </x-table-body>
+</x-table-main>

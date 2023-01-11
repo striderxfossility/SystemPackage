@@ -1,5 +1,5 @@
-<x-layout-table-main>
-    <x-layout-table-head>
+<x-table-main>
+    <x-table-head>
         <x-layout.table.head-row>
             <x-layout.table.head-column>
                 nummer
@@ -23,18 +23,18 @@
                 Lever adres
             </x-layout.table.head-column>
         </x-layout.table.head-row>
-    </x-layout-table-head>
+    </x-table-head>
 
-    <x-layout-table-body>
+    <x-table-body>
         @foreach($orders as $order)
-            <x-layout-table-body-row :link="route('orders.show', $order)">
-                <x-layout-table-body-column>
+            <x-table-body-row :link="route('orders.show', $order)">
+                <x-table-body-column>
                     Bestelbon {{ $order->id }}
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     {{ $order->offer != null ? $order->offer->number : 'Geen' }}
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     @if($order->offer != null)
                         @if ($order->count_products - $order->count_open_products == $order->count_products)
                             <div class="text-green-600">
@@ -56,31 +56,31 @@
                             </div>
                         @endif
                     @endif
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     @if ( $order->supplier_id != 0)
                         <img class="h-10 inline" src="{{ asset('img/settings/supplier/' . $order->supplier->src) }}" />
                         {{ $order->supplier->name }}
                     @else   
                         Voorraad
                     @endif
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     @if($order->afroep)
                         <div class="text-yellow-500">Op afroep</div>
                     @else
                         {{ \Jelle\Strider\DateService::get($order->delivery_date) }}
                     @endif
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     @if($order->send_auto)
                         <div class="text-yellow-500">{{ \Jelle\Strider\DateService::get($order->send_date) }}</div>
                     @endif
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     {{ $order->straat }} te {{ $order->plaats }}
-                </x-layout-table-body-column>
-            </x-layout-table-body-row>
+                </x-table-body-column>
+            </x-table-body-row>
         @endforeach
-    </x-layout-table-body>
-</x-layout-table-main>
+    </x-table-body>
+</x-table-main>

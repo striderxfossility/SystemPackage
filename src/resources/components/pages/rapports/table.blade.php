@@ -1,5 +1,5 @@
-<x-layout-table-main>
-    <x-layout-table-head>
+<x-table-main>
+    <x-table-head>
         <x-layout.table.head-row>
             <x-layout.table.head-column>
                 Verkoper
@@ -20,34 +20,34 @@
                 Ruimtes
             </x-layout.table.head-column>
         </x-layout.table.head-row>
-    </x-layout-table-head>
+    </x-table-head>
 
-    <x-layout-table-body>
+    <x-table-body>
         @foreach($rapports as $rapport)
-            <x-layout-table-body-row :link="route('rapports.edit', $rapport)">
-                <x-layout-table-body-column>
+            <x-table-body-row :link="route('rapports.edit', $rapport)">
+                <x-table-body-column>
                     {{ $rapport->user->name }}
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     {{ $rapport->name }}
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     {{ $rapport->projectnummer }}
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     {{ $rapport->datum }}
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     {{ $rapport->sanitair_pakket }}
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     {{ $rapport->rapportroom_count }}
-                </x-layout-table-body-column>
-            </x-layout-table-body-row>
+                </x-table-body-column>
+            </x-table-body-row>
         @endforeach
-    </x-layout-table-body>
-</x-layout-table-main>
+    </x-table-body>
+</x-table-main>

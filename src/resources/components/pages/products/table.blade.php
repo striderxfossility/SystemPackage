@@ -1,5 +1,5 @@
-<x-layout-table-main>
-    <x-layout-table-head>
+<x-table-main>
+    <x-table-head>
         <x-layout.table.head-row>
             <x-layout.table.head-column>
                 Leverancier
@@ -17,8 +17,8 @@
                 Verkoop
             </x-layout.table.head-column>
         </x-layout.table.head-row>
-    </x-layout-table-head>
-    <x-layout-table-body>
+    </x-table-head>
+    <x-table-body>
         @foreach($products as $product)
 
             @if(Route::current()->getName() == 'shadowproducten.createFromRoom' || Route::current()->getName() == 'shadowproducten.searchFromRoom')
@@ -31,29 +31,29 @@
                 @php($link = route('producten.edit', $product))
             @endif
 
-            <x-layout-table-body-row :link="$link">
-                <x-layout-table-body-column>
+            <x-table-body-row :link="$link">
+                <x-table-body-column>
                     <img class="inline-block h-10" src="{{ asset('img/settings/supplier/' . $product->supplier->src) }}" />
                     <div class="inline-block">{{ $product->supplier->name }}</div>
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     <div class="uppercase {{ $product->state == \App\Enums\ProductState::Product->value ? 'text-red-500' : 'text-indigo-500'}}">{{ $product->state == 'product' ? 'product' : 'dienst' }}</div>
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     <img class="inline-block h-10" src="{{ asset('img/settings/product/' . $product->src) }}" /> 
                     <div class="inline-block">{{ $product->name }}</div>
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     {{ \App\Services\PriceService::display($product->inkoop) }} excl. btw
-                </x-layout-table-body-column>
+                </x-table-body-column>
 
-                <x-layout-table-body-column>
+                <x-table-body-column>
                     {{ \App\Services\PriceService::display($product->verkoop) }} excl. btw
-                </x-layout-table-body-column>
-            </x-layout-table-body-row>
+                </x-table-body-column>
+            </x-table-body-row>
         @endforeach
-    </x-layout-table-body>
-</x-layout-table-main>
+    </x-table-body>
+</x-table-main>

@@ -1,5 +1,5 @@
-<x-layout-table-main>
-    <x-layout-table-head>
+<x-table-main>
+    <x-table-head>
         <x-layout.table.head-row>
             <x-layout.table.head-column>
                 Naam
@@ -11,8 +11,8 @@
                 Bedrag
             </x-layout.table.head-column>
         </x-layout.table.head-row>
-    </x-layout-table-head>
-    <x-layout-table-body>
+    </x-table-head>
+    <x-table-body>
         @foreach($packages as $package)
         
             @if(Route::current()->getName() == 'packages.indexFromRoom' || Route::current()->getName() == 'packages.searchFromRoom')
@@ -21,8 +21,8 @@
                 @php($link = route('packages.show', $package))
             @endif
 
-            <x-layout-table-body-row :link="$link">
-                <x-layout-table-body-column>
+            <x-table-body-row :link="$link">
+                <x-table-body-column>
                     <img class="inline-block h-10" src="{{ asset('img/settings/package/' . $package->src) }}" />
                     <div class="inline-block">
                         @if($package->room != null)
@@ -41,16 +41,16 @@
                             <span style="color:blue">TEMPLATE</span>
                         @endif    
                     </div>
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     {{ $package->shadowproduct()->count() }}
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     @if($package->bedrag)
                         {!! \App\Services\PriceService::displayVAT($package->bedrag) !!} incl. btw
                     @endif
-                </x-layout-table-body-column>
-            </x-layout-table-body-row>
+                </x-table-body-column>
+            </x-table-body-row>
         @endforeach
-    </x-layout-table-body>
-</x-layout-table-main>
+    </x-table-body>
+</x-table-main>

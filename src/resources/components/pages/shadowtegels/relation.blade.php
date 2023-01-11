@@ -1,10 +1,10 @@
-<x-layout-blocks-title>
+<x-blocks-title>
     <i class="fa-solid fa-clone"></i> Tegels
-</x-layout-blocks-title>
+</x-blocks-title>
 
 <div class="grid grid-cols-4 gap-x-2" id="shadowtegels">
     @foreach($shadowtegels as $shadowtegel)
-        <x-layout-block-small handle="handleShadowtegel cursor-move">
+        <x-block-small handle="handleShadowtegel cursor-move">
             <x-input-text label="hidden" class="sortingShadowtegel" name="sortShadowtegel[{{ $shadowtegel->id }}]" :value="$shadowtegel->sort" />
 
             <img style="margin:0 auto; height:200px; width:200px;" src="{{ asset('img/settings/tile/' . $shadowtegel->tile->src) }}" />
@@ -16,10 +16,10 @@
                     <div class="text-xs text-slate-700">{!! \App\Services\PriceService::displayVAT($shadowtegel->bedrag) !!} incl. btw</div>
                 @endif
             </div>
-            <x-layout-blocks-button :url="route('shadowtegels.show', $shadowtegel)" color="blue" :bottom="true">
+            <x-blocks-button :url="route('shadowtegels.show', $shadowtegel)" color="blue" :bottom="true">
                 Bekijken
-            </x-layout-blocks-button>
-        </x-layout-block-small>
+            </x-blocks-button>
+        </x-block-small>
     @endforeach
 </div>
 

@@ -1,10 +1,10 @@
-<x-layout-blocks-title>
+<x-blocks-title>
     <i class="fa-solid fa-clone"></i> Producten
-</x-layout-blocks-title>
+</x-blocks-title>
 
 <div class="grid grid-cols-4 gap-x-2" id="shadowproducten">
     @foreach($shadowproducten as $shadowproduct)
-        <x-layout-block-small handle="handleShadowproduct cursor-move" :color="$shadowproduct->state == 'product' ? 'slate' : 'slate'">
+        <x-block-small handle="handleShadowproduct cursor-move" :color="$shadowproduct->state == 'product' ? 'slate' : 'slate'">
             <x-input-text label="hidden" class="sortingShadowproduct" name="sortShadowproduct[{{ $shadowproduct->id }}]" :value="$shadowproduct->sort" />
 
             <img style="margin:0 auto; height:200px; width:200px;" src="{{ asset('img/settings/product/' . $shadowproduct->product->src) }}" />
@@ -14,10 +14,10 @@
                 <div>{{ $shadowproduct->aantal }} x {{ $shadowproduct->product->name }}</div>
                 <div class="text-xs text-slate-700">{!! \App\Services\PriceService::displayVAT($shadowproduct->totals['verkoop']) !!} incl. btw</div>
             </div>
-            <x-layout-blocks-button :url="route('shadowproducten.show', $shadowproduct)" color="blue" :bottom="true">
+            <x-blocks-button :url="route('shadowproducten.show', $shadowproduct)" color="blue" :bottom="true">
                 Bekijken
-            </x-layout-blocks-button>
-        </x-layout-block-small>
+            </x-blocks-button>
+        </x-block-small>
     @endforeach
 </div>
 

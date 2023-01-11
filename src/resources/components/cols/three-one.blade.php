@@ -20,32 +20,32 @@
 
 <div class="md:grid md:grid-cols-4 md:gap-10 mt-10">
     @if(isset($col_2))
-        <x-layout-block class="md:col-span-3">
+        <x-block class="md:col-span-3">
             {!! $col_2 !!}
-        </x-layout-block>
+        </x-block>
     @endif
 
     @if(isset($col_1))
-        <x-layout-block class="md:row-span-{{ $count }} bg-red">
+        <x-block class="md:row-span-{{ $count }} bg-red">
             {!! $col_1 !!}
-        </x-layout-block>
+        </x-block>
     @endif
 
     @if(isset($col_3))
-        <x-layout-block class="md:col-span-3">
+        <x-block class="md:col-span-3">
             {!! $col_3 !!}
-        </x-layout-block>
+        </x-block>
     @endif
 
     @if(isset($col_4))
-        <x-layout-block class="md:col-span-3">
+        <x-block class="md:col-span-3">
             {!! $col_4 !!}
-        </x-layout-block>
+        </x-block>
     @endif
 
     @if(isset($col_5))
-        <x-layout-block class="md:col-span-3">
+        <x-block class="md:col-span-3">
             {!! $col_5 !!}
-        </x-layout-block>
+        </x-block>
     @endif
 </div>

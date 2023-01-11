@@ -1,5 +1,5 @@
-<x-layout-table-main>
-    <x-layout-table-head>
+<x-table-main>
+    <x-table-head>
         <x-layout.table.head-row>
             <x-layout.table.head-column>
                 kleur
@@ -8,19 +8,19 @@
                 naam
             </x-layout.table.head-column>
         </x-layout.table.head-row>
-    </x-layout-table-head>
+    </x-table-head>
 
-    <x-layout-table-body>
+    <x-table-body>
         @foreach($colors as $color)
 
-            <x-layout-table-body-row :link="route('colors.edit', $color)">
-                <x-layout-table-body-column>
+            <x-table-body-row :link="route('colors.edit', $color)">
+                <x-table-body-column>
                     <div style="color:{{ $color->color }};">{{ $color->color }}</div>
-                </x-layout-table-body-column>
-                <x-layout-table-body-column>
+                </x-table-body-column>
+                <x-table-body-column>
                     {{ $color->name }}
-                </x-layout-table-body-column>
-            </x-layout-table-body-row>
+                </x-table-body-column>
+            </x-table-body-row>
         @endforeach
-    </x-layout-table-body>
-</x-layout-table-main>
+    </x-table-body>
+</x-table-main>

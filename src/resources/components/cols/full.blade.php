@@ -1,5 +1,5 @@
 <div class="mt-10">
-    <x-layout-block>
+    <x-block>
         {!! $slot !!}
-    </x-layout-block>
+    </x-block>
 </div>
