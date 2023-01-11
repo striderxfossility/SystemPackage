@@ -55,8 +55,9 @@
                     @if(!$offer->template)
                         @if ($offer->contact != null)
                             @if(isset($offer->room_count))
-                                <div>
-                                    <i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }}
+                                <div class="text-blue-700">
+                                    <i class="fa-solid fa-user pr-2"></i> 
+                                        {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }}
                                 </div>
                             @else
                                 <div class="text-blue-700">
@@ -82,10 +83,10 @@
                             @endif
                         @endif  
                         @if($offer->contact->des == 1)
-                            <div><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
+                            <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
                         @endif
                         @if($offer->contact->des == 2)
-                            <div><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
+                            <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
                         @endif
                     @endif
                 </x-table-body-column>
