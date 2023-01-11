@@ -13,7 +13,7 @@
             <x-table-head-column>
                 project
             </x-table-head-column>
-            @if($offer->first()->room_count)
+            @if($offers->first()->room_count)
                 <x-table-head-column>
                     ruimtes
                 </x-table-head-column>
