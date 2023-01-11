@@ -45,14 +45,14 @@
                     @if($offer->template)
                         {{ $offer->template_name }}
                     @else
-                        {{ $offer->name }} {{ $offer->number }}
+                        {{ $offer->name }} {{ $offer->fullNumber }}
                     @endif
                 </x-table-body-column>
 
                 <x-table-body-column>
                     @if(!$offer->template)
                         @if ($offer->contact != null)
-                            <div><i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }}</div>
+                            <div><i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }} {{ $offer->contact->salutation }} {{ $offer->contact->first_name }} {{ $offer->contact->last_name }}</div>
                         @endif  
                         @if($offer->contact->des == 1)
                             <div><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
@@ -75,12 +75,14 @@
                     <x-table-body-column />
                 @endif
 
-                <x-table-body-column>
-                    {{ $offer->room_count }}
-                </x-table-body-column>
+                @if($offer->room_count)
+                    <x-table-body-column>
+                        {{ $offer->room_count }}
+                    </x-table-body-column>
+                @endif
 
                 <x-table-body-column>
-                    @if ($offer->template == 0)
+                    @if ($offer->template == 0 && $offer->room_count)
                         @if ($offer->status > 2)
                             @if ($offer->count_products - $offer->count_open_products == $offer->count_products)
                                 <div class="text-green-600 font-bold">
