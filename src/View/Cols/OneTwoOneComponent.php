@@ -8,6 +8,6 @@ class OneTwoOneComponent extends Component
 {
     public function render()
     {
-        return view('/resources/components/cols/one-two-one');
+        return view($_SERVER['DOCUMENT_ROOT'].'/resources/components/cols/one-two-one');
     }
 }
