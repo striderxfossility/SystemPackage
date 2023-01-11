@@ -12,28 +12,28 @@ class StateService {
                 return '<div class="text-purple-500"><i class="fa-solid fa-envelope"></i> Verstuurd</div>';
             
             case 'nagebeld':
-                return '<i class="fa-solid fa-phone"></i> Nagebeld';
+                return '<div class="text-yellow-500"><i class="fa-solid fa-phone"></i> Nagebeld</div>';
             
             case 'aanpassing':
-                return '<i class="fa-solid fa-pen-to-square"></i> Aanpassing';
+                return '<div class="text-brown-500"><i class="fa-solid fa-pen-to-square"></i> Aanpassing</div>';
             
             case 'Afwachting':
-                return '<i class="fa-solid fa-hourglass-start"></i> Afwachting';
+                return '<div class="text-orange-500"><i class="fa-solid fa-hourglass-start"></i> Afwachting</div>';
             
             case 'Geweigerd':
-                return '<i class="fa-solid fa-square-xmark"></i> Geweigerd';
+                return '<div class="text-red-500"><i class="fa-solid fa-square-xmark"></i> Geweigerd</div>';
             
             case 'Akkoord':
-                return '<i class="fa-solid fa-square-check"></i> Akkoord';
+                return '<div class="text-green-500"><i class="fa-solid fa-square-check"></i> Akkoord</div>';
             
             case 'Gefactureerd':
-                return '<i class="fa-solid fa-file-invoice-dollar"></i> Gefactureerd';
+                return '<div class="text-indigo-500"><i class="fa-solid fa-file-invoice-dollar"></i> Gefactureerd</div>';
             
             case 'Nieuw':
-                return '<i class="fa-regular fa-file"></i> Nieuw';
+                return '<div class="text-blue-500"><i class="fa-regular fa-file"></i> Nieuw</div>';
             
             case 'Verzonden':
-                return '<i class="fa-solid fa-envelope-circle-check"></i> Verzonden';
+                return '<div class="text-purple-500"><i class="fa-solid fa-envelope-circle-check"></i> Verzonden</div>';
             
             default:
                 return $state;
