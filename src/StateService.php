@@ -15,7 +15,7 @@ class StateService {
                 return '<div class="text-yellow-500"><i class="fa-solid fa-phone"></i> Nagebeld</div>';
             
             case 'aanpassing':
-                return '<div class="text-brown-500"><i class="fa-solid fa-pen-to-square"></i> Aanpassing</div>';
+                return '<div class="text-emerald-500"><i class="fa-solid fa-pen-to-square"></i> Aanpassing</div>';
             
             case 'Afwachting':
                 return '<div class="text-orange-500"><i class="fa-solid fa-hourglass-start"></i> Afwachting</div>';
