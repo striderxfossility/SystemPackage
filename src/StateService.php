@@ -6,43 +6,43 @@ class StateService {
     {
         switch ($state) {
             case 'new':
-                return 'Nieuw';
+                return '<i class="fa-regular fa-file"></i> Nieuw';
             
             case 'sended':
-                return 'Verstuurd';
+                return '<i class="fa-solid fa-envelope-circle-check"></i> Verstuurd';
             
             case 'nagebeld':
-                return 'Nagebeld';
+                return '<i class="fa-solid fa-phone"></i> Nagebeld';
             
             case 'aanpassing':
-                return 'Aanpassing';
+                return '<i class="fa-solid fa-pen-to-square"></i> Aanpassing';
             
             case 'Afwachting':
-                return 'Afwachting';
+                return '<i class="fa-solid fa-hourglass-start"></i> Afwachting';
             
             case 'Geweigerd':
-                return 'Geweigerd';
+                return '<i class="fa-solid fa-square-xmark"></i> Geweigerd';
             
             case 'Akkoord':
-                return 'Akkoord';
+                return '<i class="fa-solid fa-square-check"></i> Akkoord';
             
             case 'Gefactureerd':
-                return 'Gefactureerd';
+                return '<i class="fa-solid fa-file-invoice-dollar"></i> Gefactureerd';
             
             case '0':
-                return 'Nieuw';
+                return '<i class="fa-regular fa-file"></i> Nieuw';
             
             case '1':
-                return 'Verzonden';
+                return '<i class="fa-solid fa-envelope-circle-check"></i> Verzonden';
             
             case '2':
-                return 'Geannuleerd';
+                return '<i class="fa-solid fa-square-xmark"></i> Geweigerd';
             
             case '3':
-                return 'Geaccepteerd';
+                return '<i class="fa-solid fa-square-check"></i> Akkoord';
             
             case '4':
-                return 'Gefactureerd';
+                return '<i class="fa-solid fa-file-invoice-dollar"></i> Gefactureerd';
             
             default:
                 return $state;
