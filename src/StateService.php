@@ -33,7 +33,7 @@ class StateService {
                 return '<div class="text-blue-500"><i class="fa-regular fa-file"></i> Nieuw</div>';
             
             case 'Verzonden':
-                return '<div class="text-purple-500"><i class="fa-solid fa-envelope-circle-check"></i> Verzonden</div>';
+                return '<div class="text-purple-500"><i class="fa-solid fa-envelope"></i> Verzonden</div>';
             
             default:
                 return $state;
