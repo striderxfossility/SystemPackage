@@ -13,9 +13,11 @@
             <x-table-head-column>
                 project
             </x-table-head-column>
-            <x-table-head-column>
-                ruimtes
-            </x-table-head-column>
+            @if($offer->first()->room_count)
+                <x-table-head-column>
+                    ruimtes
+                </x-table-head-column>
+            @endif
             <x-table-head-column>
                 bedrag
             </x-table-head-column>
@@ -52,7 +54,32 @@
                 <x-table-body-column>
                     @if(!$offer->template)
                         @if ($offer->contact != null)
-                            <div><i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }} {{ $offer->contact->salutation }} {{ $offer->contact->first_name }} {{ $offer->contact->last_name }}</div>
+                            @if($offer->room_count)
+                                    <div>
+                                        <i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }}
+                                    </div>
+                                @else
+                                <div class="text-blue-700">
+                                    @if ($offer->contact != null)
+                                        @if($offer->contact->state != \App\Enums\ContactState::Company->value)
+                                            <i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->first_name }} {{ $offer->contact->last_name }}
+                                        @endif
+                                    @endif  
+                                </div>
+                                <div class="text-purple-700">
+                                    @if ($offer->contact != null)
+                                        @if($offer->contact->state == \App\Enums\ContactState::Company->value)
+                                            <i class="fa-solid fa-building pr-2"></i> {{ $offer->contact->first_name }}
+                                        @else
+                                            @if ($offer->company != null)
+                                                <i class="fa-solid fa-building pr-2"></i> {{ $offer->company->first_name }}
+                                            @elseif($offer->contact->company != null)
+                                                <i class="fa-solid fa-building pr-2"></i> {{ $offer->contact->company->first_name }}
+                                            @endif
+                                        @endif
+                                    @endif
+                                </div>
+                            @endif
                         @endif  
                         @if($offer->contact->des == 1)
                             <div><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
@@ -67,6 +94,7 @@
                     @if($offer->contact->groothuis)
                         <x-table-body-column>
                             {{ $offer->contact->groothuis->project }} - {{ $offer->contact->groothuis->omschrijving }}
+                            {{ $offer->reference }}
                         </x-table-body-column>
                     @else
                         <x-table-body-column />
