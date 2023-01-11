@@ -16,5 +16,14 @@
     },
     "require-dev": {
         "laravel/framework": "^9.46"
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jelle\\Strider\\ViewServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
 }
