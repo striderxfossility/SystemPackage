@@ -22,6 +22,9 @@ class StateService {
             
             case 'Geweigerd':
                 return '<div class="text-red-500"><i class="fa-solid fa-square-xmark"></i> Geweigerd</div>';
+
+            case 'Geannuleerd':
+                return '<div class="text-red-500"><i class="fa-solid fa-square-xmark"></i> Geweigerd</div>';
             
             case 'Akkoord':
                 return '<div class="text-green-500"><i class="fa-solid fa-square-check"></i> Akkoord</div>';
