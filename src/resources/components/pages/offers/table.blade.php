@@ -112,6 +112,10 @@
                         @if($offer->bedrag)
                             {!! \App\Services\PriceService::displayVAT($offer->bedrag) !!} incl. btw
                         @endif
+
+                        @if($offer->total)
+                            {!! \App\Services\PriceService::displayVAT($offer->total) !!} incl. btw
+                        @endif
                     @endif
                 </x-table-body-column>
 
