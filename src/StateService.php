@@ -6,10 +6,10 @@ class StateService {
     {
         switch ($state) {
             case 'new':
-                return '<i class="fa-regular fa-file"></i> Nieuw';
+                return '<div class="text-blue-500"><i class="fa-regular fa-file"></i> Nieuw</div>';
             
             case 'sended':
-                return '<i class="fa-solid fa-envelope-circle-check"></i> Verstuurd';
+                return '<div class="text-purple-500"><i class="fa-solid fa-envelope"></i> Verstuurd</div>';
             
             case 'nagebeld':
                 return '<i class="fa-solid fa-phone"></i> Nagebeld';
@@ -29,20 +29,11 @@ class StateService {
             case 'Gefactureerd':
                 return '<i class="fa-solid fa-file-invoice-dollar"></i> Gefactureerd';
             
-            case '0':
+            case 'Nieuw':
                 return '<i class="fa-regular fa-file"></i> Nieuw';
             
-            case '1':
+            case 'Verzonden':
                 return '<i class="fa-solid fa-envelope-circle-check"></i> Verzonden';
-            
-            case '2':
-                return '<i class="fa-solid fa-square-xmark"></i> Geweigerd';
-            
-            case '3':
-                return '<i class="fa-solid fa-square-check"></i> Akkoord';
-            
-            case '4':
-                return '<i class="fa-solid fa-file-invoice-dollar"></i> Gefactureerd';
             
             default:
                 return $state;
