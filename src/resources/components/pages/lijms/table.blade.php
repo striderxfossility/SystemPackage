@@ -1,15 +1,15 @@
 <x-table-main>
     <x-table-head>
         <x-table-head-row>
-            <x-layout.table.head-column>
+            <x-table-head-column>
                 Naam
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Inkoop
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Prijs
-            </x-layout.table.head-column>
+            </x-table-head-column>
         </x-table-head-row>
     </x-table-head>
 

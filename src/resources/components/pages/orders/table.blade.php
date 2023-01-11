@@ -1,27 +1,27 @@
 <x-table-main>
     <x-table-head>
         <x-table-head-row>
-            <x-layout.table.head-column>
+            <x-table-head-column>
                 nummer
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Offerte
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Producten
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Leverancier
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Lever datum
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Wordt verstuurd op
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Lever adres
-            </x-layout.table.head-column>
+            </x-table-head-column>
         </x-table-head-row>
     </x-table-head>
 

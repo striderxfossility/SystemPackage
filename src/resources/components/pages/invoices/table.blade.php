@@ -1,21 +1,21 @@
 <x-table-main>
     <x-table-head>
         <x-table-head-row>
-            <x-layout.table.head-column>
+            <x-table-head-column>
                 status
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 offerte
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 contact
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 project
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 bedrag
-            </x-layout.table.head-column>
+            </x-table-head-column>
         </x-table-head-row>
     </x-table-head>
 

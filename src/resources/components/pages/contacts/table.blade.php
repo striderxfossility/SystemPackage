@@ -1,24 +1,24 @@
 <x-table-main>
     <x-table-head>
         <x-table-head-row>
-            <x-layout.table.head-column>
+            <x-table-head-column>
                 project
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 contact
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 email
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 telefoon
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 adres
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 offertes
-            </x-layout.table.head-column>
+            </x-table-head-column>
         </x-table-head-row>
     </x-table-head>
 

@@ -1,21 +1,21 @@
 <x-table-main>
     <x-table-head>
         <x-table-head-row>
-            <x-layout.table.head-column>
+            <x-table-head-column>
                 Leverancier
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Soort
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Naam
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Inkoop
-            </x-layout.table.head-column>
-            <x-layout.table.head-column>
+            </x-table-head-column>
+            <x-table-head-column>
                 Verkoop
-            </x-layout.table.head-column>
+            </x-table-head-column>
         </x-table-head-row>
     </x-table-head>
     <x-table-body>
