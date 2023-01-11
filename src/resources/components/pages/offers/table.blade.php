@@ -94,7 +94,7 @@
                     @if($offer->contact->groothuis)
                         <x-table-body-column>
                             {{ $offer->contact->groothuis->project }} - {{ $offer->contact->groothuis->omschrijving }}
-                            {{ $offer->reference }}
+                            {{ $offer->client_reference }}
                         </x-table-body-column>
                     @else
                         <x-table-body-column />
