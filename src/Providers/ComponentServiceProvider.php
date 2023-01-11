@@ -3,6 +3,7 @@ namespace Jelle\Strider\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+
 use Jelle\Strider\View\Basics\PriceLoadComponent;
 use Jelle\Strider\View\Basics\SearchButtonComponent;
 use Jelle\Strider\View\Blocks\ActiesComponent;
