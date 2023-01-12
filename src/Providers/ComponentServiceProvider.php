@@ -37,6 +37,7 @@ use Jelle\Strider\View\Pages\Contacts\SmallContactComponent;
 use Jelle\Strider\View\Pages\Emails\EmailsTableComponent;
 use Jelle\Strider\View\Pages\Groothuis\GroothuisTableComponent;
 use Jelle\Strider\View\Pages\Hoekprofielen\HoekprofielenTableComponent;
+use Jelle\Strider\View\Pages\Invoices\InvoicesRelationComponent;
 use Jelle\Strider\View\Pages\Invoices\InvoicesTableComponent;
 use Jelle\Strider\View\Pages\Layouts\LayoutsTableComponent;
 use Jelle\Strider\View\Pages\Lijms\LijmsTableComponent;
@@ -137,6 +138,7 @@ class ComponentServiceProvider extends ServiceProvider
         Blade::component('blocks-email',                    EmailComponent::class);
         Blade::component('sended',                          SendedComponent::class);
         Blade::component('relation-offers',                 OffersRelationComponent::class);
+        Blade::component('relation-invoices',               InvoicesRelationComponent::class);
         Blade::component('relation-rooms',                  RoomsRelationComponent::class);
         Blade::component('relation-shadowtegels',           ShadowtegelsRelationComponent::class);
         Blade::component('relation-shadowproducten',        ShadowproductenRelationComponent::class);

@@ -11,6 +11,9 @@
                 @if($offer->bedrag)
                     <div class="text-xs text-slate-700">{!! \App\Services\PriceService::displayVat($offer->bedrag) !!} incl. btw</div>
                 @endif
+                @if($offer->total)
+                    <div class="text-xs text-slate-700">{!! \App\Services\PriceService::display($offer->total) !!} excl. btw</div>
+                @endif
             </div>
             <x-blocks-button :url="route('offers.show', $offer)" color="blue" :bottom="true">
                 Bekijken

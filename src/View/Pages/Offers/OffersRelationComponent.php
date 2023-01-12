@@ -4,7 +4,6 @@ namespace Jelle\Strider\View\Pages\Offers;
 
 use Illuminate\Support\Collection;
 use Illuminate\View\Component;
-use App\Models\Offer;
 
 class OffersRelationComponent extends Component
 {
