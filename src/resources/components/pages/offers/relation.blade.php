@@ -7,7 +7,7 @@
         <x-block-small>
             <div class="text-center mt-2">
                 <img style="margin:0 auto; height:200px; width:200px;" src="{{ asset('img/pdf.png') }}" />
-                <div class="mt-2">{{ $offer->name }} {{ $offer->number }}</div>
+                <div class="mt-2">{{ $offer->name }} {{ $offer->fullNumber }}</div>
                 @if($offer->bedrag)
                     <div class="text-xs text-slate-700">{!! \App\Services\PriceService::displayVat($offer->bedrag) !!} incl. btw</div>
                 @endif

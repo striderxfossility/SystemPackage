@@ -38,6 +38,18 @@ class StateService {
             case 'Verzonden':
                 return '<div class="text-purple-500"><i class="fa-solid fa-envelope"></i> Verzonden</div>';
             
+            case 'memorialstone':
+                return '<div class="text-blue-500"><i class="fa-regular fa-file"></i> Gedenksteen</div>';
+
+            case 'byinscription':
+                return '<div class="text-blue-500"><i class="fa-regular fa-file"></i> Bijinscriptie</div>';
+
+            case 'subscription':
+                return '<div class="text-blue-500"><i class="fa-regular fa-file"></i> Abonnement</div>';
+            
+            case 'Klaar':
+                return '<div class="text-blue-500"><i class="fa-regular fa-file"></i> Klaar</div>';
+            
             default:
                 return $state;
         }

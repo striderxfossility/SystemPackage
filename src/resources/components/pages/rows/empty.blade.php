@@ -1,4 +1,4 @@
-<div id="empty_row" class="md:grid md:grid-cols-10 md:gap-2">
+<div id="empty_row" style="display:none;" class="md:grid md:grid-cols-10 md:gap-2">
     <input type="hidden" name="id[]" value="0" />
     <div class="pt-2 text-right">
         <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer inline handle h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

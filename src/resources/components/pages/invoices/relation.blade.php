@@ -7,7 +7,7 @@
         <x-block-small>
             <div class="text-center mt-2">
                 <img style="margin:0 auto; height:200px; width:200px;" src="{{ asset('img/pdf.png') }}" />
-                <div class="mt-2">Factuur {{ $invoice->number }}</div>
+                <div class="mt-2">Factuur {{ $invoice->fullNumber }}</div>
                 @if($invoice->total)
                     <div class="text-xs text-slate-700">{!! \App\Services\PriceService::display($invoice->total) !!} excl. btw</div>
                 @endif
