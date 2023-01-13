@@ -28,6 +28,9 @@ class StateService {
             
             case 'Akkoord':
                 return '<div class="text-green-500"><i class="fa-solid fa-square-check"></i> Akkoord</div>';
+
+            case 'paid':
+                return '<div class="text-green-500"><i class="fa-solid fa-square-check"></i> Betaald</div>';
             
             case 'Gefactureerd':
                 return '<div class="text-indigo-500"><i class="fa-solid fa-file-invoice-dollar"></i> Gefactureerd</div>';
