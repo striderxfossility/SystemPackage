@@ -70,6 +70,7 @@ use Jelle\Strider\View\Pages\Tegelzetters\TegezettersRelationComponent;
 use Jelle\Strider\View\Pages\Tiles\TilesOpenstaandRelationComponent;
 use Jelle\Strider\View\Pages\Tiles\TilesRelationComponent;
 use Jelle\Strider\View\Pages\Tiles\TilesTableComponent;
+use Jelle\Strider\View\Pages\Timeblocks\TimeblocksTableComponent;
 use Jelle\Strider\View\Pages\Voegen\VoegenTableComponent;
 use Jelle\Strider\View\Pages\Voorstrijks\VoorstrijksTableComponent;
 use Jelle\Strider\View\Pages\Workorders\WorkordersGraftableComponent;
@@ -90,6 +91,7 @@ class ComponentServiceProvider extends ServiceProvider
         Blade::component('row',                             RowComponent::class);
         Blade::component('empty-row',                       EmptyRowComponent::class);
         Blade::component('offers-table',                    OffersTableComponent::class);
+        Blade::component('timeblocks-table',                    TimeblocksTableComponent::class);
         Blade::component('workorders-table',                WorkordersTableComponent::class);
         Blade::component('workorders-graftable',            WorkordersGraftableComponent::class);
         Blade::component('invoices-table',                  InvoicesTableComponent::class);
