@@ -7,11 +7,13 @@
         <x-block-small handle="handleShadowproduct cursor-move" :color="$shadowproduct->state == 'product' ? 'slate' : 'slate'">
             <x-input-text label="hidden" class="sortingShadowproduct" name="sortShadowproduct[{{ $shadowproduct->id }}]" :value="$shadowproduct->sort" />
 
-            <img style="margin:0 auto; height:200px; width:200px;" src="{{ asset('img/settings/product/' . $shadowproduct->product->src) }}" />
+            @if(isset($shadowproduct->product))
+                <img style="margin:0 auto; height:200px; width:200px;" src="{{ asset('img/settings/product/' . $shadowproduct->product->src) }}" />
+            @endif
 
             <div class="text-center mt-2">
                 <div class="{{ $shadowproduct->state == 'product' ? 'text-red-500' : 'text-indigo-500' }}">{{ $shadowproduct->state == 'product' ? 'product' : 'dienst' }}</div>
-                <div>{{ $shadowproduct->aantal }} x {{ $shadowproduct->product->name }}</div>
+                <div>{{ $shadowproduct->aantal }} x {{ isset($shadowproduct->product) ? $shadowproduct->product->name : 'Geen product' }}</div>
                 <div class="text-xs text-slate-700">{!! \App\Services\PriceService::displayVAT($shadowproduct->totals['verkoop']) !!} incl. btw</div>
             </div>
             <x-blocks-button :url="route('shadowproducten.show', $shadowproduct)" color="blue" :bottom="true">
