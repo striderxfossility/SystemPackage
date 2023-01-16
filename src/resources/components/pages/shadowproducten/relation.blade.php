@@ -13,9 +13,22 @@
 
             <div class="text-center mt-2">
                 <div class="{{ $shadowproduct->state == 'product' ? 'text-red-500' : 'text-indigo-500' }}">{{ $shadowproduct->state == 'product' ? 'product' : 'dienst' }}</div>
-                <div>{{ $shadowproduct->aantal }} x {{ isset($shadowproduct->product) ? $shadowproduct->product->name : 'Geen product' }}</div>
+                @if($shadowproduct->teruggave_actief)
+                <div class="font-bold">TERUGGAVE</div>
+                @endif
+                <div>
+                    @if($shadowproduct->teruggave_actief)
+                    -
+                    @endif
+                    {{ $shadowproduct->aantal }} x {{ isset($shadowproduct->product) ? $shadowproduct->product->name : 'Geen product' }}</div>
                 <div class="text-xs text-slate-700">{!! \App\Services\PriceService::displayVAT($shadowproduct->totals['verkoop']) !!} incl. btw</div>
             </div>
+            <x-blocks-button :url="route('api.shadowproducts.add', $shadowproduct)" color="orange">
+                Voeg product toe
+            </x-blocks-button>
+            <x-blocks-button :url="route('api.shadowproducts.substract', $shadowproduct)" color="orange">
+                verwijder 1 product
+            </x-blocks-button>
             <x-blocks-button :url="route('shadowproducten.show', $shadowproduct)" color="blue" :bottom="true">
                 Bekijken
             </x-blocks-button>

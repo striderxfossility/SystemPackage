@@ -30,6 +30,7 @@ use Jelle\Strider\View\Forms\FormSearchComponent;
 use Jelle\Strider\View\Forms\FormSelectComponent;
 use Jelle\Strider\View\Forms\FormSubmitComponent;
 use Jelle\Strider\View\Forms\FormTextareaComponent;
+use Jelle\Strider\View\Pages\Attachments\AttachmentsRelationComponent;
 use Jelle\Strider\View\Pages\Choices\ChoiceRelationComponent;
 use Jelle\Strider\View\Pages\Colors\ColorsTableComponent;
 use Jelle\Strider\View\Pages\Contacts\ContactsTableComponent;
@@ -148,6 +149,7 @@ class ComponentServiceProvider extends ServiceProvider
         Blade::component('blocks-email',                    EmailComponent::class);
         Blade::component('sended',                          SendedComponent::class);
         Blade::component('relation-offers',                 OffersRelationComponent::class);
+        Blade::component('relation-attachments',            AttachmentsRelationComponent::class);
         Blade::component('relation-invoices',               InvoicesRelationComponent::class);
         Blade::component('relation-stockproducts',          StockproductsRelationComponent::class);
         Blade::component('relation-materialproducts',       MaterialproductsRelationComponent::class);
