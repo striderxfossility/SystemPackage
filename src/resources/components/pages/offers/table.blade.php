@@ -54,7 +54,7 @@
                 <x-table-body-column>
                     @if(!$offer->template)
                         @if ($offer->contact != null)
-                            @if(isset($offer->room_count))
+                            @if(!class_exists('App\Enums\ContactState'))
                                 <div class="text-blue-700">
                                     <i class="fa-solid fa-user pr-2"></i> 
                                         {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }}
