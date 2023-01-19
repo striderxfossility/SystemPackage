@@ -77,14 +77,16 @@
                     @endif
                 </x-table-body-column>
                 @if(!$invoice->template)
-                    @if($invoice->contact->groothuis)
-                        <x-table-body-column>
-                            {{ $invoice->contact->groothuis->project }} - {{ $invoice->contact->groothuis->omschrijving }}
-                        </x-table-body-column>
-                    @else
-                        <x-table-body-column>
-                            {{ $invoice->client_reference }}
-                        </x-table-body-column>
+                    @if ($invoice->contact != null)
+                        @if($invoice->contact->groothuis)
+                            <x-table-body-column>
+                                {{ $invoice->contact->groothuis->project }} - {{ $invoice->contact->groothuis->omschrijving }}
+                            </x-table-body-column>
+                        @else
+                            <x-table-body-column>
+                                {{ $invoice->client_reference }}
+                            </x-table-body-column>
+                        @endif
                     @endif
                 @else
                     <x-table-body-column />

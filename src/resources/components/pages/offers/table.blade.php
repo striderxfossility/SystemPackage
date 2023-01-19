@@ -92,14 +92,16 @@
                 </x-table-body-column>
 
                 @if(!$offer->template)
-                    @if($offer->contact->groothuis)
-                        <x-table-body-column>
-                            {{ $offer->contact->groothuis->project }} - {{ $offer->contact->groothuis->omschrijving }}
-                        </x-table-body-column>
-                    @else
-                        <x-table-body-column>
-                            {{ $offer->client_reference }}
-                        </x-table-body-column>
+                    @if ($invoice->contact != null)
+                        @if($offer->contact->groothuis)
+                            <x-table-body-column>
+                                {{ $offer->contact->groothuis->project }} - {{ $offer->contact->groothuis->omschrijving }}
+                            </x-table-body-column>
+                        @else
+                            <x-table-body-column>
+                                {{ $offer->client_reference }}
+                            </x-table-body-column>
+                        @endif
                     @endif
                 @else
                     <x-table-body-column />
