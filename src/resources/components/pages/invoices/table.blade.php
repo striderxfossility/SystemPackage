@@ -66,13 +66,14 @@
                                     @endif
                                 </div>
                             @endif
+                        
+                            @if($invoice->contact->des == 1)
+                                <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
+                            @endif
+                            @if($invoice->contact->des == 2)
+                                <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
+                            @endif
                         @endif  
-                        @if($invoice->contact->des == 1)
-                            <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
-                        @endif
-                        @if($invoice->contact->des == 2)
-                            <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
-                        @endif
                     @endif
                 </x-table-body-column>
                 @if(!$invoice->template)
