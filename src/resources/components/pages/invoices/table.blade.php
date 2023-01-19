@@ -39,7 +39,7 @@
                 <x-table-body-column>
                     @if(!$invoice->template)
                         @if ($invoice->contact != null)
-                            @if(isset($invoice->room_count))
+                            @if(!class_exists('App\Enums\ContactState'))
                                 <div class="text-blue-700">
                                     <i class="fa-solid fa-user pr-2"></i> 
                                         {{ $invoice->contact->aanhef }} {{ $invoice->contact->achternaam }}
