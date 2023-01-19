@@ -92,7 +92,7 @@
                 </x-table-body-column>
 
                 @if(!$offer->template)
-                    @if ($invoice->contact != null)
+                    @if ($offer->contact != null)
                         @if($offer->contact->groothuis)
                             <x-table-body-column>
                                 {{ $offer->contact->groothuis->project }} - {{ $offer->contact->groothuis->omschrijving }}
