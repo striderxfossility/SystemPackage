@@ -16,6 +16,12 @@
             <x-table-head-column>
                 bedrag
             </x-table-head-column>
+            <x-table-head-column>
+                factuurdatum
+            </x-table-head-column>
+            <x-table-head-column>
+                herinneringsdatum
+            </x-table-head-column>
         </x-table-head-row>
     </x-table-head>
 
@@ -90,6 +96,12 @@
                     @if($invoice->total)
                         {!! \App\Services\PriceService::display($invoice->total) !!} excl. btw
                     @endif
+                </x-table-body-column>
+                <x-table-body-column>
+                    {{ \Jelle\Strider\DateService::get($invoice->sended) }}
+                </x-table-body-column>
+                <x-table-body-column>
+                    {{ \Jelle\Strider\DateService::get($invoice->reminded) }}
                 </x-table-body-column>
             </x-table-body-row>
 
