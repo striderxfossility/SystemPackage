@@ -29,6 +29,16 @@
             <x-blocks-button :url="route('api.shadowproducts.substract', $shadowproduct)" color="orange">
                 verwijder 1 product
             </x-blocks-button>
+            @if($shadowproduct->verkoop != 0)
+            <x-blocks-button :url="route('api.shadowproducts.priceNull', $shadowproduct)" color="purple">
+                Prijs op €0,-
+            </x-blocks-button>
+            @endif
+            @if($shadowproduct->verkoop == 0)
+                <x-blocks-button :url="route('api.shadowproducts.priceBack', $shadowproduct)" color="purple">
+                    Zet prijs terug
+                </x-blocks-button>
+            @endif
             <x-blocks-button :url="route('shadowproducten.show', $shadowproduct)" color="blue" :bottom="true">
                 Bekijken
             </x-blocks-button>
