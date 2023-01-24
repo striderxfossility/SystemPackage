@@ -8,9 +8,6 @@
                 Offerte
             </x-table-head-column>
             <x-table-head-column>
-                Producten
-            </x-table-head-column>
-            <x-table-head-column>
                 Leverancier
             </x-table-head-column>
             <x-table-head-column>
@@ -33,29 +30,6 @@
                 </x-table-body-column>
                 <x-table-body-column>
                     {{ $order->offer != null ? $order->offer->number : 'Geen' }}
-                </x-table-body-column>
-                <x-table-body-column>
-                    @if($order->offer != null)
-                        @if ($order->count_products - $order->count_open_products == $order->count_products)
-                            <div class="text-green-600">
-                                Producten: {{ $order->count_products - $order->count_open_products }} / {{ $order->count_products }}
-                            </div>
-                        @else
-                            <div class="text-red-600">
-                                Producten: {{ $order->count_products - $order->count_open_products }} / {{ $order->count_products }}
-                            </div>
-                        @endif
-
-                        @if ($order->count_tiles - $order->count_open_tiles == $order->count_tiles)
-                            <div class="text-green-600">
-                                Tegels: {{ $order->count_tiles - $order->count_open_tiles }} / {{ $order->count_tiles }}
-                            </div>
-                        @else
-                            <div class="text-red-600">
-                                Tegels: {{ $order->count_tiles - $order->count_open_tiles }} / {{ $order->count_tiles }}
-                            </div>
-                        @endif
-                    @endif
                 </x-table-body-column>
                 <x-table-body-column>
                     @if ( $order->supplier_id != 0)
