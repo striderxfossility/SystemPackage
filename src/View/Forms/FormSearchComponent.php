@@ -14,6 +14,7 @@ class FormSearchComponent extends Component
     public $label;
     public $table;
     public $columns;
+    public $current;
 
     public function __construct(string $name, string $label, string $table, ?string $value = '')
     {
@@ -22,6 +23,7 @@ class FormSearchComponent extends Component
         $this->label    = $label;
         $this->table    = DB::table($table)->latest()->get()->toArray();
         $this->columns  = Schema::getColumnListing($table);
+        $this->current  = DB::table($table)->where('id', $this->value)->first();
     }
 
     public function render()
@@ -31,7 +33,8 @@ class FormSearchComponent extends Component
             'value'     => $this->value,
             'label'     => $this->label,
             'table'     => $this->table,
-            'columns'   => $this->columns
+            'columns'   => $this->columns,
+            'current'   => $this->current,
         ]);
     }
 }

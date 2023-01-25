@@ -10,7 +10,13 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
         </svg>
     </button>
-    <input id="{{ $name }}" name="{{ $name }}" value="{{ $value != '' ? $value : old($name) }}" class="block mt-1 w-full shadow-sm border-slate-300 focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50" type="text" />
+    
+    @if(isset($current->name))
+        <input id="{{ $name }}" name="{{ $name }}" value="{{ $value != '' ? $value : old($name) }}" class="hidden mt-1 w-full shadow-sm border-slate-300 focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50" type="text" />
+        <input value="{{ $current->name }}" id="placeholder" class="block mt-1 w-full shadow-sm border-slate-300 focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50" type="text" />
+    @else
+        <input id="{{ $name }}" name="{{ $name }}" value="{{ $value != '' ? $value : old($name) }}" class="block mt-1 w-full shadow-sm border-slate-300 focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50" type="text" />
+    @endif
 </div>
 
 <div id="tablesearch{{ $name }}" style="z-index:5; display:none;" class="fixed top-0 left-0 m-10">
@@ -38,7 +44,7 @@
         
             <tbody>
                 @foreach($table as $row)
-                    <tr onclick="selectRow{{ $name }}({{ $row->id }})" class="cursor-pointer searchClass{{ $name }} bg-white border-b hover:bg-slate-200">
+                    <tr onclick="selectRow{{ $name }}({{ $row->id }}, '{{ isset($row->name) ? $row->name : '' }}')" class="cursor-pointer searchClass{{ $name }} bg-white border-b hover:bg-slate-200">
                         @foreach($columns as $column)
                             <td class="p-2">{{ $row->$column }}</td>
                         @endforeach 
@@ -61,10 +67,14 @@
         document.getElementById('tablesearch{{ $name }}').style.display = 'none'
     }
 
-    function selectRow{{ $name }}(id)
+    function selectRow{{ $name }}(id, name)
     {
         document.getElementById('{{ $name }}').value = id
         document.getElementById('tablesearch{{ $name }}').style.display = 'none'
+
+        if(document.getElementById('placeholder')) {
+            document.getElementById('placeholder').value = name;
+        }
     }
 
     function searchTable{{ $name }}()
