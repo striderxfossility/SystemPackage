@@ -29,17 +29,17 @@
                             @if($package->room->offer != null)
                                 @if($package->room->offer->template)
                                     <span style="color:blue">TEMPLATE</span>
-                                @else
-                                    {{ $package->room->nummer }} 
-                                    {{ $package->room->name }}
-                                    {{ $package->room->template_name }}
                                 @endif
                             @else
                                 <span style="color:blue">TEMPLATE</span>
                             @endif
                         @else
                             <span style="color:blue">TEMPLATE</span>
-                        @endif    
+                        @endif   
+                        
+                        {{ $package->nummer }} 
+                        {{ $package->name }}
+                        {{ $package->template_name }}
                     </div>
                 </x-table-body-column>
                 <x-table-body-column>
