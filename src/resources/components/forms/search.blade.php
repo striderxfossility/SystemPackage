@@ -13,7 +13,7 @@
     
     @if(isset($current->name))
         <input id="{{ $name }}" name="{{ $name }}" value="{{ $value != '' ? $value : old($name) }}" class="hidden mt-1 w-full shadow-sm border-slate-300 focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50" type="text" />
-        <input value="{{ $current->name }}" id="placeholder" class="block mt-1 w-full shadow-sm border-slate-300 focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50" type="text" />
+        <input value="{{ $current->name }}" id="placeholder{{ $name }}" class="block mt-1 w-full shadow-sm border-slate-300 focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50" type="text" />
     @else
         <input id="{{ $name }}" name="{{ $name }}" value="{{ $value != '' ? $value : old($name) }}" class="block mt-1 w-full shadow-sm border-slate-300 focus:border-slate-300 focus:ring focus:ring-slate-200 focus:ring-opacity-50" type="text" />
     @endif
@@ -72,8 +72,8 @@
         document.getElementById('{{ $name }}').value = id
         document.getElementById('tablesearch{{ $name }}').style.display = 'none'
 
-        if(document.getElementById('placeholder')) {
-            document.getElementById('placeholder').value = name;
+        if(document.getElementById('placeholder{{ $name }}')) {
+            document.getElementById('placeholder{{ $name }}').value = name;
         }
     }
 
