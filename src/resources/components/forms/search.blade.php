@@ -37,7 +37,7 @@
             <thead class="sticky top-0 bg-slate-300 w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <tr>
                     @foreach($columns as $column)
-                        <th class="p-2">{{ $column }}</th>
+                        <th class="p-2">{{ \Jelle\Strider\TableService::head($column) }}</th>
                     @endforeach
                 </tr>
             </thead>
@@ -45,8 +45,8 @@
             <tbody>
                 @foreach($table as $row)
                     <tr onclick="selectRow{{ $name }}({{ $row->id }}, '{{ isset($row->name) ? $row->name : '' }}')" class="cursor-pointer searchClass{{ $name }} bg-white border-b hover:bg-slate-200">
-                        @foreach($columns as $column)
-                            <td class="p-2">{{ $row->$column }}</td>
+                        @foreach($columns as $key => $column)
+                            <td class="p-2">{{ \Jelle\Strider\TableService::value($row->$column, $column, $column_values[$key]) }}</td>
                         @endforeach 
                     </tr>
                 @endforeach
