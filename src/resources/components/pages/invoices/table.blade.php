@@ -40,19 +40,19 @@
                     @if(!$invoice->template)
                         @if ($invoice->contact != null)
                             @if(!class_exists('App\Enums\ContactState'))
-                                <div class="text-blue-700">
+                                <div class="text-blue-700 dark:text-blue-300">
                                     <i class="fa-solid fa-user pr-2"></i> 
                                         {{ $invoice->contact->aanhef }} {{ $invoice->contact->achternaam }}
                                 </div>
                             @else
-                                <div class="text-blue-700">
+                                <div class="text-blue-700 dark:text-blue-300">
                                     @if ($invoice->contact != null)
                                         @if($invoice->contact->state != \App\Enums\ContactState::Company->value)
                                             <i class="fa-solid fa-user pr-2"></i> {{ $invoice->contact->first_name }} {{ $invoice->contact->last_name }}
                                         @endif
                                     @endif  
                                 </div>
-                                <div class="text-purple-700">
+                                <div class="text-purple-700 dark:text-purple-300">
                                     @if ($invoice->contact != null)
                                         @if($invoice->contact->state == \App\Enums\ContactState::Company->value)
                                             <i class="fa-solid fa-building pr-2"></i> {{ $invoice->contact->first_name }}
@@ -68,10 +68,10 @@
                             @endif
                         
                             @if($invoice->contact->des == 1)
-                                <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
+                                <div class="text-purple-700 dark:text-purple-300"><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
                             @endif
                             @if($invoice->contact->des == 2)
-                                <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
+                                <div class="text-purple-700 dark:text-purple-300"><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
                             @endif
                         @endif  
                     @endif

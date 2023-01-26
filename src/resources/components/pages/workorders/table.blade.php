@@ -39,14 +39,14 @@
                 </x-table-body-column>
 
                 <x-table-body-column>
-                    <div class="text-blue-700">
+                    <div class="text-blue-700 dark:text-blue-300">
                         @if ($workorder->contact != null)
                             @if($workorder->contact->state != \App\Enums\ContactState::Company->value)
                                 <i class="fa-solid fa-user pr-2"></i> {{ $workorder->contact->first_name }} {{ $workorder->contact->last_name }}
                             @endif
                         @endif  
                     </div>
-                    <div class="text-purple-700">
+                    <div class="text-purple-700 dark:text-purple-300">
                         @if ($workorder->contact != null)
                             @if($workorder->contact->state == \App\Enums\ContactState::Company->value)
                                 <i class="fa-solid fa-building pr-2"></i> {{ $workorder->contact->first_name }}
