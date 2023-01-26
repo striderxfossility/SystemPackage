@@ -44,7 +44,7 @@
 
                 <x-table-body-column>
                     @if(!class_exists("\App\Enums\ContactState"))
-                        <div class="text-blue-700">
+                        <div class="text-blue-700 dark:text-blue-300">
                             <i class="fa-solid fa-user pr-2"></i> 
                                 {{ $contact->aanhef }} {{ $contact->achternaam }}
                         </div>
@@ -56,7 +56,7 @@
                             <div class="text-purple-700 dark:text-purple-300"><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
                         @endif
                     @else
-                        <div class="text-blue-700">
+                        <div class="text-blue-700 dark:text-blue-300">
                             @if ($contact != null)
                                 @if($contact->state != \App\Enums\ContactState::Company->value)
                                     <i class="fa-solid fa-user pr-2"></i> {{ $contact->first_name }} {{ $contact->last_name }}
