@@ -1,8 +1,10 @@
 <?php
 namespace Jelle\Strider;
 
+use Illuminate\Support\Facades\Log;
+
 class TeamleaderService {
-    private static function process($url, $fields)
+    public static function process($url, $fields)
     {
         $apiFields = array(  
 			"api_group"  => ("20052"),
@@ -24,6 +26,41 @@ class TeamleaderService {
 
 		return $output;
     }
+
+	public static function get_deal_overview($deal_id)
+	{
+		$deal = TeamleaderService::process('https://app.teamleader.eu/api/getDeal.php', ['deal_id' => $deal_id]);
+
+		if(!isset($deal->title))
+			return '';
+
+		$stringBuilder = '';
+
+		$stringBuilder .= $deal->title . '<br />';
+
+		if(isset($deal->offerte_nr))
+			$stringBuilder .= '<b>Offerte ' . date('Y') . ' / ' . $deal->offerte_nr .'</b><br /><br />';
+
+		if(isset($deal->items))
+		{
+			foreach($deal->items as $item)
+			{
+				if($item->subtitle != "")
+				{
+					$stringBuilder .= '<b>'.$item->subtitle . '</b><br />';
+				}
+				$stringBuilder .= $item->amount . ' -- ' .$item->text . '<br />';
+			}
+		}
+
+		if(isset($deal->custom_fields->{'61732'}))
+			$stringBuilder .= '<br /><i>leveradres:' . $deal->custom_fields->{'61732'} . '</i>';
+
+		if(isset($deal->custom_fields->{'132606'}))
+			$stringBuilder .= '<br /><i>Levering:' . $deal->custom_fields->{'132606'} . '</i>';
+
+		return html_entity_decode($stringBuilder);
+	}
 
     public static function add_order_to_teamleader($order)
     {
