@@ -97,7 +97,12 @@
                     @endif
 
                     @if($invoice->total)
-                        {!! \App\Services\PriceService::display($invoice->total) !!} excl. btw
+                        {!! \App\Services\PriceService::display($invoice->total) !!} 
+                        @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl')
+                            incl. btw
+                        @else
+                            excl. btw
+                        @endif
                     @endif
                 </x-table-body-column>
                 <x-table-body-column>
