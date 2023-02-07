@@ -63,6 +63,7 @@ use Jelle\Strider\View\Pages\Rows\EmptyRowComponent;
 use Jelle\Strider\View\Pages\Rows\RowComponent;
 use Jelle\Strider\View\Pages\Shadowproducten\ShadowproductenRelationComponent;
 use Jelle\Strider\View\Pages\Shadowtegels\ShadowtegelsRelationComponent;
+use Jelle\Strider\View\Pages\Showrooms\ShowroomsTableComponent;
 use Jelle\Strider\View\Pages\Sills\SillsTableComponent;
 use Jelle\Strider\View\Pages\Stockproducts\StockproductsRelationComponent;
 use Jelle\Strider\View\Pages\Suppliers\SuppliersTableComponent;
@@ -119,6 +120,7 @@ class ComponentServiceProvider extends ServiceProvider
         Blade::component('products-table',                  ProductsTableComponent::class);
         Blade::component('rooms-table',                     RoomsTableComponent::class);
         Blade::component('tegelzetters-table',              TegelzettersTableComponent::class);
+        Blade::component('showrooms-table',                 ShowroomsTableComponent::class);
         Blade::component('table-main',                      TableMainComponent::class);
         Blade::component('table-head',                      TableHeadComponent::class);
         Blade::component('table-body',                      TableBodyComponent::class);
