@@ -4,7 +4,9 @@
         <div class="grid grid-cols-3 gap-2">
             @foreach ($notes as $note)
                 <x-block-small color="yellow">
-                    <div class="font-bold">{{ $note->user->name }}</div>
+                    @if($note->user != null)
+                        <div class="font-bold">{{ $note->user->name }}</div>
+                    @endif
                     <div>{!! \App\Services\OfferService::text($note->description) !!}</div>
                     <div class="text-slate-500">{{ \Jelle\Strider\DateService::get($note->created_at) }}</div>
                     <x-blocks-button :bottom="true" :url="route('notes.edit', $note)" color="yellow">
