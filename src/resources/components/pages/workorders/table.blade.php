@@ -63,7 +63,7 @@
                 <x-table-body-column>
                     @php($matArray = [])
                     @foreach ($workorder->materialproduct as $materialproduct)
-                        @if(isset($matArray[$materialproduct->material]))
+                        @if(isset($materialproduct->material))
                             @if(isset($matArray[$materialproduct->material->src]))
                                 @php($matArray[$materialproduct->material->src] = [
                                     'amount' => $matArray[$materialproduct->material->src]['amount'] + $materialproduct->amount,
