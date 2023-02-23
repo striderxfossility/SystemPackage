@@ -146,8 +146,14 @@
                         @endif
 
                         @if($offer->total)
-                            {!! \App\Services\PriceService::displayVAT($offer->total) !!} incl. btw
+                            {!! \App\Services\PriceService::display($offer->total) !!} 
+                            @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl')
+                                incl. btw
+                            @else
+                                excl. btw
+                            @endif
                         @endif
+
                     @endif
                 </x-table-body-column>
 
