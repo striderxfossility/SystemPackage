@@ -43,6 +43,7 @@ use Jelle\Strider\View\Pages\Invoices\InvoicesRelationComponent;
 use Jelle\Strider\View\Pages\Invoices\InvoicesTableComponent;
 use Jelle\Strider\View\Pages\Layouts\LayoutsTableComponent;
 use Jelle\Strider\View\Pages\Lijms\LijmsTableComponent;
+use Jelle\Strider\View\Pages\Maintenances\MaintenancesTableComponent;
 use Jelle\Strider\View\Pages\Materialproducts\MaterialproductsRelationComponent;
 use Jelle\Strider\View\Pages\Montageprijzen\MontageprijzenTableComponent;
 use Jelle\Strider\View\Pages\Notes\NotesGridComponent;
@@ -96,6 +97,7 @@ class ComponentServiceProvider extends ServiceProvider
         Blade::component('row',                             RowComponent::class);
         Blade::component('empty-row',                       EmptyRowComponent::class);
         Blade::component('offers-table',                    OffersTableComponent::class);
+        Blade::component('maintenances-table',              MaintenancesTableComponent::class);
         Blade::component('timeblocks-table',                TimeblocksTableComponent::class);
         Blade::component('timesheets-table',                TimesheetsTableComponent::class);
         Blade::component('workorders-table',                WorkordersTableComponent::class);
