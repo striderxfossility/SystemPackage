@@ -17,7 +17,7 @@
                 @endif
                 <div class="text-xs text-slate-700">
                     <div>{{ $orderproduct->amount }} stuk(s)</div>
-                    <div>{!! \App\Services\PriceService::displayVAT($orderproduct->price * $orderproduct->amount) !!} incl. btw</div>
+                    <div>{!! \App\Services\PriceService::displayVAT($orderproduct->total) !!} incl. btw</div>
                 </div>
             </div>
             <x-blocks-button :url="route('orderproducts.show', $orderproduct)" color="blue" :bottom="true">
