@@ -11,7 +11,7 @@
                 <div class="text-xs text-slate-700">
                     <div>{{ $tile->amount }} tegels</div>
                     <div>{{ $tile->formaat }}</div>
-                    {!! \App\Services\PriceService::displayVAT($tile->amount * $tile->verkoop) !!} incl. btw
+                    {!! \App\Services\PriceService::displayVAT($tile->amount * $tile->verkoop * $tile->squared_meters) !!} incl. btw
                 </div>
             </div>
             <x-blocks-button :url="route('orders.addTile', [$order, $tile, $tile->amount])" color="blue" :bottom="true">
