@@ -1,4 +1,4 @@
-<div class="relative md:border-2 md:border-{{ $color }}-300 dark:border-{{ $color }}-800 md:bg-{{ $color }}-50 dark:bg-{{ $color }}-700 p-2 mt-2 {{ $class }} {{ $handle }}">
+<div class="relative md:border-2 md:border-{{ $color }}-300 md:bg-{{ $color }}-50 p-2 mt-2 {{ $class }} {{ $handle }}">
     {{ $slot }}
 </div>
 

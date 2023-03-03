@@ -33,8 +33,8 @@
 
         <x-search-button :submit="false" :name="$name" />
 
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-            <thead class="sticky top-0 bg-slate-300 w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <table class="w-full text-sm text-left text-gray-500">
+            <thead class="sticky top-0 bg-slate-300 w-full text-sm text-left text-gray-500">
                 <tr>
                     @foreach($columns as $column)
                         <th class="p-2">{{ \Jelle\Strider\TableService::head($column) }}</th>

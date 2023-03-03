@@ -55,19 +55,19 @@
                     @if(!$offer->template)
                         @if ($offer->contact != null)
                             @if(!class_exists('App\Enums\ContactState'))
-                                <div class="text-blue-700 dark:text-blue-300">
+                                <div class="text-blue-700">
                                     <i class="fa-solid fa-user pr-2"></i> 
                                         {{ $offer->contact->aanhef }} {{ $offer->contact->achternaam }}
                                 </div>
                             @else
-                                <div class="text-blue-700 dark:text-blue-300">
+                                <div class="text-blue-700">
                                     @if ($offer->contact != null)
                                         @if($offer->contact->state != \App\Enums\ContactState::Company->value)
                                             <i class="fa-solid fa-user pr-2"></i> {{ $offer->contact->first_name }} {{ $offer->contact->last_name }}
                                         @endif
                                     @endif  
                                 </div>
-                                <div class="text-purple-700 dark:text-purple-300">
+                                <div class="text-purple-700">
                                     @if ($offer->contact != null)
                                         @if($offer->contact->state == \App\Enums\ContactState::Company->value)
                                             <i class="fa-solid fa-building pr-2"></i> {{ $offer->contact->first_name }}
@@ -82,10 +82,10 @@
                                 </div>
                             @endif
                             @if($offer->contact->des == 1)
-                                <div class="text-purple-700 dark:text-purple-300"><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
+                                <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> Groothuisbouw</div>
                             @endif
                             @if($offer->contact->des == 2)
-                                <div class="text-purple-700 dark:text-purple-300"><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
+                                <div class="text-purple-700"><i class="fa-solid fa-building pr-2"></i> ABC Arkenbouw</div>
                             @endif
                         @endif  
                     @endif

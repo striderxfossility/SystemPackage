@@ -27,14 +27,14 @@
             <x-table-body-row :link="route('maintenances.show', $maintenance)">
                 <x-table-body-column>
                     @if ($maintenance->contact != null)
-                        <div class="text-blue-700 dark:text-blue-300">
+                        <div class="text-blue-700">
                             @if ($maintenance->contact != null)
                                 @if($maintenance->contact->state != \App\Enums\ContactState::Company->value)
                                     <i class="fa-solid fa-user pr-2"></i> {{ $maintenance->contact->first_name }} {{ $maintenance->contact->last_name }}
                                 @endif
                             @endif  
                         </div>
-                        <div class="text-purple-700 dark:text-purple-300">
+                        <div class="text-purple-700">
                             @if ($maintenance->contact != null)
                                 @if($maintenance->contact->state == \App\Enums\ContactState::Company->value)
                                     <i class="fa-solid fa-building pr-2"></i> {{ $maintenance->contact->first_name }}
