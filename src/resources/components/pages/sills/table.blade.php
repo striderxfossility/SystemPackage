@@ -5,6 +5,12 @@
                 Naam
             </x-table-head-column>
             <x-table-head-column>
+                Oud
+            </x-table-head-column>
+            <x-table-head-column>
+                Standaard
+            </x-table-head-column>
+            <x-table-head-column>
                 Inkoop
             </x-table-head-column>
             <x-table-head-column>
@@ -19,6 +25,12 @@
                 <x-table-body-column>
                     <img class="inline-block h-10" src="{{ asset('img/settings/sill/' . $sill->src) }}" />
                     <div class="inline-block">{{ $sill->name }}</div>
+                </x-table-body-column>
+                <x-table-body-column>
+                    {{ $sill->old == 1 ? 'Ja' : 'Nee' }}
+                </x-table-body-column>
+                <x-table-body-column>
+                    {{ $sill->default == 1 ? 'Ja' : 'Nee' }}
                 </x-table-body-column>
                 <x-table-body-column>
                     {{ \App\Services\PriceService::display($sill->inkoop) }} excl. btw
