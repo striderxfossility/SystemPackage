@@ -27,10 +27,10 @@
                     <div class="inline-block">{{ $hoekprofiel->name }}</div>
                 </x-table-body-column>
                 <x-table-body-column>
-                    {{ $hoekprofiel->old == 1 ? '<span class"text-green-500">Ja</span>' : '<span class"text-red-500">Nee</span>' }}
+                    {!! $hoekprofiel->old == 1 ? '<span class"text-green-500">Ja</span>' : '<span class"text-red-500">Nee</span>' !!}
                 </x-table-body-column>
                 <x-table-body-column>
-                    {{ $hoekprofiel->default == 1 ? '<span class"text-green-500">Ja</span>' : '<span class"text-red-500">Nee</span>' }}
+                    {!! $hoekprofiel->default == 1 ? '<span class"text-green-500">Ja</span>' : '<span class"text-red-500">Nee</span>' !!}
                 </x-table-body-column>
                 <x-table-body-column>
                     {{ \App\Services\PriceService::display($hoekprofiel->inkoop) }} excl. btw
