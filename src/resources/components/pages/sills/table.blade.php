@@ -27,10 +27,10 @@
                     <div class="inline-block">{{ $sill->name }}</div>
                 </x-table-body-column>
                 <x-table-body-column>
-                    {{ $sill->old == 1 ? 'Ja' : 'Nee' }}
+                    {!! $sill->old == 1 ? '<span class="text-green-500">Ja</span>' : '<span class="text-red-500">Nee</span>' !!}
                 </x-table-body-column>
                 <x-table-body-column>
-                    {{ $sill->default == 1 ? 'Ja' : 'Nee' }}
+                    {!! $sill->default == 1 ? '<span class="text-green-500">Ja</span>' : '<span class="text-red-500">Nee</span>' !!}
                 </x-table-body-column>
                 <x-table-body-column>
                     {{ \App\Services\PriceService::display($sill->inkoop) }} excl. btw
