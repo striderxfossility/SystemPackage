@@ -72,7 +72,7 @@
                 </x-table-body-column>
                 <x-table-body-column>
                     @foreach($maintenance->maintenanceform as $maintenanceform)
-                        {{ $maintenance->note }} <br />
+                        {{ $maintenanceform->note }} <br />
                     @endforeach
                 </x-table-body-column>
             </x-table-body-row>
