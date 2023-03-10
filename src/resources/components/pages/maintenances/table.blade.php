@@ -75,6 +75,11 @@
                         {{ $maintenanceform->note }} <br />
                     @endforeach
                 </x-table-body-column>
+                <x-table-body-column>
+                    @foreach($maintenance->maintenanceform as $maintenanceform)
+                        {{ $maintenanceform->advies_nu }} <br />
+                    @endforeach
+                </x-table-body-column>
             </x-table-body-row>
         @endforeach
     </x-table-body>
