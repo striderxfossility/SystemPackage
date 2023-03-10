@@ -19,6 +19,12 @@
             <x-table-head-column>
                 Datum uitvoer
             </x-table-head-column>
+            <x-table-head-column>
+                Wat heb je gedaan
+            </x-table-head-column>
+            <x-table-head-column>
+                Advies voor nu
+            </x-table-head-column>
         </x-table-head-row>
     </x-table-head>
 
@@ -63,6 +69,11 @@
                 </x-table-body-column>
                 <x-table-body-column>
                     {{ \Jelle\Strider\DateService::get($maintenance->date) }}
+                </x-table-body-column>
+                <x-table-body-column>
+                    @foreach($maintenance->maintenanceform as $maintenanceform)
+                        {{ $maintenance->note }} <br />
+                    @endforeach
                 </x-table-body-column>
             </x-table-body-row>
         @endforeach
