@@ -8,7 +8,7 @@
             <div class="text-xs font-bold">{{ $materialproduct->amount }} x {{ $materialproduct->name }}</div>
             <div class="md:grid md:grid-cols-2 md:gap-6">
                 <div>
-                    @if(isset($materialproduct->material))
+                    @if($materialproduct->material != null)
                         <div><img width="50" class="inline my-2" style="vertical-align: middle" src="{{ asset('img/settings/material/' . $materialproduct->material->src) }}" /></div>
                     @endif
                     <div class="text-xs">Prijs: {{ \App\Services\PriceService::display($materialproduct->price) }} excl. btw per stuk</div>
