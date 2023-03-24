@@ -10,6 +10,7 @@
 <script type="text/javascript"> 
     $( ".datepicker-{{ $name }}" ).datepicker({
         showWeek: true,
+        firstDay:1,
         dateFormat: 'yy-mm-dd'
     });
 </script>
