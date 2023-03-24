@@ -14,7 +14,7 @@
                 project
             </x-table-head-column>
             <x-table-head-column>
-                bedrag
+                openstaand
             </x-table-head-column>
             <x-table-head-column>
                 factuurdatum
