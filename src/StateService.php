@@ -53,6 +53,9 @@ class StateService {
             case 'Klaar':
                 return '<div class="text-blue-500"><i class="fa-regular fa-file"></i> Klaar</div>';
             
+            case 'paid_part':
+                return '<div class="text-green-500"><i class="fa-solid fa-square-check"></i> Deels Betaald</div>';
+            
             default:
                 return $state;
         }
