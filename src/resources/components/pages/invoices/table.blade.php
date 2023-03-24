@@ -14,7 +14,7 @@
                 project
             </x-table-head-column>
             <x-table-head-column>
-                @if(isset($invoice->openstaand))
+                @if(isset($invoices->first()->openstaand))
                     openstaand
                 @else
                     bedrag
