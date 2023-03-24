@@ -14,7 +14,11 @@
                 project
             </x-table-head-column>
             <x-table-head-column>
-                openstaand
+                @if(isset($invoice->openstaand))
+                    openstaand
+                @else
+                    bedrag
+                @endif
             </x-table-head-column>
             <x-table-head-column>
                 factuurdatum
@@ -92,16 +96,21 @@
                     <x-table-body-column />
                 @endif
                 <x-table-body-column>
-                    @if($invoice->bedrag)
-                        {!! \App\Services\PriceService::displayVAT($invoice->bedrag) !!} incl. btw
-                    @endif
+                    @if(isset($invoice->openstaand))
+                        {!! \App\Services\PriceService::display($invoice->openstaand * 1.21) !!} incl. btw
+                    @else
 
-                    @if($invoice->total)
-                        {!! \App\Services\PriceService::display($invoice->total) !!} 
-                        @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl')
-                            incl. btw
-                        @else
-                            excl. btw
+                        @if($invoice->bedrag)
+                            {!! \App\Services\PriceService::displayVAT($invoice->bedrag) !!} incl. btw
+                        @endif
+
+                        @if($invoice->total)
+                            {!! \App\Services\PriceService::display($invoice->total) !!} 
+                            @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl')
+                                incl. btw
+                            @else
+                                excl. btw
+                            @endif
                         @endif
                     @endif
                 </x-table-body-column>
