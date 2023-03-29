@@ -37,10 +37,8 @@
                             $offer = $order->offer;
 
                             if($offer->contact->groothuis != null) {
-                                $extra = $offer->contact->groothuis->project . ' - ' . $offer->contact->groothuis->omschrijving;
+                                $extra = ' ' . $offer->contact->groothuis->project . ' - ' . $offer->contact->groothuis->omschrijving;
                             } else {
-                                $extra = $offer->fullNumber;
-                    
                                 if(isset($offer->contact))
                                 {
                                     $extra .= ' ' . $offer->contact->aanhef . ' ' . $offer->contact->achternaam;
