@@ -30,6 +30,26 @@
                 </x-table-body-column>
                 <x-table-body-column>
                     {{ $order->offer != null ? $order->offer->number : 'Geen' }}
+
+                    @php
+                        if($order->offer != null)
+                        {
+                            $offer = $order->offer;
+
+                            if($offer->contact->groothuis != null) {
+                                $extra = $offer->contact->groothuis->project . ' - ' . $offer->contact->groothuis->omschrijving;
+                            } else {
+                                $extra = $offer->fullNumber;
+                    
+                                if(isset($offer->contact))
+                                {
+                                    $extra .= ' ' . $offer->contact->aanhef . ' ' . $offer->contact->achternaam;
+                                }
+                            }
+
+                            echo $extra;
+                        }
+                    @endphp
                 </x-table-body-column>
                 <x-table-body-column>
                     @if ( $order->supplier_id != 0)
