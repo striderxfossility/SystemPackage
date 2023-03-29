@@ -41,7 +41,7 @@
                             } else {
                                 if(isset($offer->contact))
                                 {
-                                    $extra .= ' ' . $offer->contact->aanhef . ' ' . $offer->contact->achternaam;
+                                    $extra = ' ' . $offer->contact->aanhef . ' ' . $offer->contact->achternaam;
                                 }
                             }
 
