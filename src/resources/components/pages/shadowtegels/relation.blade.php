@@ -7,10 +7,20 @@
         <x-block-small handle="handleShadowtegel cursor-move">
             <x-input-text label="hidden" class="sortingShadowtegel" name="sortShadowtegel[{{ $shadowtegel->id }}]" :value="$shadowtegel->sort" />
 
-            <img style="margin:0 auto; height:200px; width:200px;" src="{{ asset('img/settings/tile/' . $shadowtegel->tile->src) }}" />
+            @if(isset($shadowtegel->tile))
+                <img style="margin:0 auto; height:200px; width:200px;" src="{{ asset('img/settings/tile/' . $shadowtegel->tile->src) }}" />
+            @endif
 
             <div class="text-center mt-2">
-                <div>{{ $shadowtegel->squared_meters }} m² {{ $shadowtegel->tile->name }}</div>
+                <div>
+                    {{ $shadowtegel->squared_meters }} m² 
+
+                    @if(isset($shadowtegel->tile))
+                        {{ $shadowtegel->tile->name }}
+                    @else
+                        Geen tegel gekoppeld
+                    @endif
+                </div>
                 @if($shadowtegel->bedrag)
                     <x-check-priceload :offer="$shadowtegel->room->offer" />
                     <div class="text-xs text-slate-700">{!! \App\Services\PriceService::displayVAT($shadowtegel->bedrag) !!} incl. btw</div>
