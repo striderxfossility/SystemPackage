@@ -25,6 +25,9 @@
             <x-table-head-column>
                 Advies voor nu
             </x-table-head-column>
+            <x-table-head-column>
+                Advies toekomst
+            </x-table-head-column>
         </x-table-head-row>
     </x-table-head>
 
@@ -78,6 +81,11 @@
                 <x-table-body-column>
                     @foreach($maintenance->maintenanceform as $maintenanceform)
                         {{ $maintenanceform->advies_nu }} <br />
+                    @endforeach
+                </x-table-body-column>
+                <x-table-body-column>
+                    @foreach($maintenance->maintenanceform as $maintenanceform)
+                        {{ $maintenanceform->advies_toekomst }} <br />
                     @endforeach
                 </x-table-body-column>
             </x-table-body-row>
