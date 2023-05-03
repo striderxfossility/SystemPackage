@@ -53,7 +53,7 @@
                     data: 
                     {
                         arr: sort_array,
-                        table: 'rooms',
+                        table: 'packages',
 
                     },
                     success: function(result) 
