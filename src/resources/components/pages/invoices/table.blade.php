@@ -108,7 +108,7 @@
                             @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl')
                                 {!! \App\Services\PriceService::display($invoice->total) !!}  incl. btw
                             @else
-                                {!! \App\Services\PriceService::displayVAT($invoice->total) !!}  excl. btw
+                                {!! \App\Services\PriceService::displayVAT($invoice->total) !!}  incl. btw
                             @endif
                         @endif
                     @endif
