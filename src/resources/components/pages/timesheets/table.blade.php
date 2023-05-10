@@ -14,9 +14,6 @@
                 Categorie
             </x-table-head-column>
             <x-table-head-column>
-                Uren
-            </x-table-head-column>
-            <x-table-head-column>
                 Werk
             </x-table-head-column>
             <x-table-head-column>
@@ -50,9 +47,6 @@
                 </x-table-body-column>
                 <x-table-body-column>
                     {{ $timesheet->category_id }}
-                </x-table-body-column>
-                <x-table-body-column>
-                    {{ $timesheet->from }}
                 </x-table-body-column>
                 <x-table-body-column>
                     {{ $timesheet->work }}
