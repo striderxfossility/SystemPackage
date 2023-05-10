@@ -5,6 +5,12 @@
                 Gebruiker
             </x-table-head-column>
             <x-table-head-column>
+                Van
+            </x-table-head-column>
+            <x-table-head-column>
+                Tot
+            </x-table-head-column>
+            <x-table-head-column>
                 Categorie
             </x-table-head-column>
             <x-table-head-column>
@@ -35,6 +41,12 @@
                     @else
                         {{ $timesheet->tegelzetter->name }}
                     @endif
+                </x-table-body-column>
+                <x-table-body-column>
+                    {{ $timesheet->from_1 }}:{{ $timesheet->from_2 }}
+                </x-table-body-column>
+                <x-table-body-column>
+                    {{ $timesheet->to_1 }}:{{ $timesheet->to_2 }}
                 </x-table-body-column>
                 <x-table-body-column>
                     {{ $timesheet->category_id }}
