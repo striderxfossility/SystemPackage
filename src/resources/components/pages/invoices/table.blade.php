@@ -101,12 +101,12 @@
                     @else
 
                         @if($invoice->bedrag)
-                            {!! \App\Services\PriceService::display($invoice->bedrag) !!} incl. btw
+                            {!! \App\Services\PriceService::displayVAT($invoice->bedrag) !!} incl. btw
                         @endif
 
                         @if($invoice->total)
-                            @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl')
-                                {!! \App\Services\PriceService::display($invoice->total) !!}  incl. btw
+                            @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl' || url('/') == 'https://backend.badkamer.studio')
+                                {!! \App\Services\PriceService::display($invoice->total) !!}  incl. btwt
                             @else
                                 {!! \App\Services\PriceService::displayVAT($invoice->total) !!}  incl. btw
                             @endif
