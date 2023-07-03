@@ -96,6 +96,7 @@
                     <x-table-body-column />
                 @endif
                 <x-table-body-column>
+                    {{ url('/') }}
                     @if(isset($invoice->openstaand))
                         {!! \App\Services\PriceService::display($invoice->openstaand * 1.21) !!} incl. btw
                     @else
@@ -106,7 +107,7 @@
 
                         @if($invoice->total)
                             @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl' || url('/') == 'https://backend.badkamer.studio')
-                                {!! \App\Services\PriceService::display($invoice->total) !!}  incl. btwt
+                                {!! \App\Services\PriceService::display($invoice->total) !!}  incl. btw
                             @else
                                 {!! \App\Services\PriceService::displayVAT($invoice->total) !!}  incl. btw
                             @endif
