@@ -105,7 +105,7 @@
                         @endif
 
                         @if($invoice->total)
-                            @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl')
+                            @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl' || url('/') == 'https://backend.badkamer.studio')
                                 {!! \App\Services\PriceService::display($invoice->total) !!}  incl. btw
                             @else
                                 {!! \App\Services\PriceService::displayVAT($invoice->total) !!}  incl. btw
