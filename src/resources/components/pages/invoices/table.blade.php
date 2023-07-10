@@ -97,18 +97,18 @@
                 @endif
                 <x-table-body-column>
                     @if(isset($invoice->openstaand))
-                        {!! \App\Services\PriceService::display($invoice->openstaand * 1.21) !!} incl. btw
+                        {!! \App\Services\PriceService::display($invoice->openstaand * 1.21) !!} incl. btwa
                     @else
 
                         @if($invoice->bedrag)
-                            {!! \App\Services\PriceService::displayVAT($invoice->bedrag) !!} incl. btw
+                            {!! \App\Services\PriceService::displayVAT($invoice->bedrag) !!} incl. btwb
                         @endif
 
                         @if($invoice->total)
                             @if(url('/') == 'https://backend.weerstandgrafmonumenten.nl')
-                                {!! \App\Services\PriceService::display($invoice->total) !!}  incl. btw
+                                {!! \App\Services\PriceService::display($invoice->total) !!}  incl. btwc
                             @else
-                                {!! \App\Services\PriceService::displayVAT($invoice->total) !!}  incl. btw
+                                {!! \App\Services\PriceService::displayVAT($invoice->total) !!}  incl. btwd
                             @endif
                         @endif
                     @endif
