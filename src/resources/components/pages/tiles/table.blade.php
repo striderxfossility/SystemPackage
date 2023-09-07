@@ -29,8 +29,12 @@
 
             <x-table-body-row :link="$link">
                 <x-table-body-column>
-                    <img class="inline-block h-10" src="{{ asset('img/settings/supplier/' . $tile->supplier->src) }}" />
-                    <div class="inline-block">{{ $tile->supplier->name }}</div>
+                    @if (isset($tile->supplier->src))
+                        <img class="inline-block h-10" src="{{ asset('img/settings/supplier/' . $tile->supplier->src) }}" />
+                        <div class="inline-block">{{ $tile->supplier->name }}</div>
+                    @else
+                        <div class="inline-block">Geen leverancier</div>
+                    @endif
                 </x-table-body-column>
 
                 <x-table-body-column>
