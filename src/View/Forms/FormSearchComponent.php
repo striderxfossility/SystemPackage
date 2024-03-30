@@ -21,15 +21,17 @@ class FormSearchComponent extends Component
     public function __construct(string $name, string $label, string $table, ?string $value = '', ?string $connection = '')
     {
         if ($connection != '') {
-            DB::setDefaultConnection($connection);
+            $db = DB::connection($connection);
+        } else {
+            $db = DB::connection();
         }
-        
+
         $this->name         = $name;
         $this->value        = $value;
         $this->label        = $label;
-        $this->table        = DB::table($table)->latest()->get()->toArray();
+        $this->table        = $db->table($table)->latest()->get()->toArray();
         $this->columns      = Schema::getColumnListing($table);
-        $this->current      = DB::table($table)->where('id', $this->value)->first();
+        $this->current      = $db->table($table)->where('id', $this->value)->first();
         $this->table_name   = $table;
 
         foreach ($this->columns as $key => $column) {
