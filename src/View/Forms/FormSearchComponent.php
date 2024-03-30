@@ -18,8 +18,12 @@ class FormSearchComponent extends Component
     public $current;
     public $column_values;
 
-    public function __construct(string $name, string $label, string $table, ?string $value = '')
+    public function __construct(string $name, string $label, string $table, ?string $value = '', ?string $connection = '')
     {
+        if ($connection != '') {
+            DB::setDefaultConnection($connection);
+        }
+        
         $this->name         = $name;
         $this->value        = $value;
         $this->label        = $label;
