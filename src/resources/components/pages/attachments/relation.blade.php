@@ -7,7 +7,7 @@
         <x-block-small handle="handleAttachment cursor-move">
             <x-input-text label="hidden" class="sortingAttachment" name="sortAttachment[{{ $attachment->id }}]" :value="$attachment->sort" />
 
-            <img onclick="window.location.href = '{{ asset('img/settings/attachment/' . $attachment->src) }}';" style="margin:0 auto; height:200px; width:200px;" src="{{ asset($attachment->thumbnailsmall) }}" />
+            <img onclick="window.location.href = '{{ asset('img/settings/attachment/' . $attachment->src) }}';" style="object-fit:contain; margin:0 auto; height:200px; width:200px;" src="{{ asset($attachment->thumbnailsmall) }}" />
             <div class="text-center mt-2">
                 <div>{{ $attachment->name }}</div>
                 <div class="text-xs text-slate-700">Toegevoegd op {{ $attachment->created_at }}</div>
